@@ -242,13 +242,15 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
   environment.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch";
-    rebuild-git = "sudo git -C /etc/nixos add . && sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-    update = "sudo nix flake update --flake /etc/nixos";
-    edit-conf = "sudo nano /etc/nixos/configuration.nix";
-    edit-flake = "sudo nano /etc/nixos/flake.nix";
-    edit-home = "sudo nano  /etc/nixos/home.nix";
-   };
+    rebuild-etc = "sudo nixos-rebuild switch";
+    rebuild = "git -C ~/nixos-config add . && sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";
+    update = "nix flake update --flake ~/nixos-config";
+    edit-conf = "nano ~/nixos-config/configuration.nix";
+    edit-flake = "nano ~/nixos-config/flake.nix";
+    edit-home = "nano ~/nixos-config/home.nix";
+
+    push-conf = "git -C ~/nixos-config add . && echo 'Enter commit message:' && read msg && git -C ~/nixos-config commit -m \"$msg\" && git -C ~/nixos-config push origin master";
+  };
   
   systemd.tmpfiles.rules = [
     "d /etc/brave/policies/managed 0755 stars users -"
