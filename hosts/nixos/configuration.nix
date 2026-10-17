@@ -246,9 +246,9 @@
     rebuild-etc = "sudo nixos-rebuild switch";
     rebuild = "git -C ~/nixos-config add . && sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";
     update = "nix flake update --flake ~/nixos-config";
-    edit-conf = "nano ~/nixos-config/hosts/nixos/configuration.nix";
-    edit-flake = "nano ~/nixos-config/flake.nix";
-    edit-home = "nano ~/nixos-config/home/home.nix";
+    edit-conf = "kate ~/nixos-config/hosts/nixos/configuration.nix";
+    edit-flake = "kate ~/nixos-config/flake.nix";
+    edit-home = "kate ~/nixos-config/home/home.nix";
     push-conf = "git -C ~/nixos-config add . && echo 'Enter commit message:' && read msg && git -C ~/nixos-config commit -m \"$msg\" && git -C ~/nixos-config push origin master";
   };
 

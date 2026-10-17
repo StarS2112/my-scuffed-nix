@@ -2,16 +2,23 @@
   home.stateVersion = "26.05";
   home.packages = [ pkgs.htop ];
   programs.git = {
-    enable = true;
-    userName  = "StarS2112";
-    userEmail = "nxagamersb@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-      # optional nice defaults
-      pull.rebase = true;
-      core.editor = "kate";   # or whatever you use
+  enable = true;
+  settings = {
+    user = {
+      name = "StarS2112";
+      email = "nxagamersb@gmail.com";
     };
-  };   
+    init = {
+      defaultBranch = "main";
+    };
+    pull = {
+      rebase = true;
+    };
+    core = {
+      editor = "kate";
+    };
+  };
+};
   xdg.configFile."fastfetch".source = ./config/fastfetch;
   xdg.configFile."kitty".source = ./config/kitty;
   xdg.configFile."noctalia".source = ./config/noctalia;
