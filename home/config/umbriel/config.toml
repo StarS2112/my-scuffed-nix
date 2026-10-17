@@ -151,6 +151,7 @@ hide_timeout_ms = 0
 "Mod" = "spawn:noctalia msg panel-toggle launcher"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
+"Mod+L" = "spawn:noctalia msg session lock"
 #keybindlock
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
@@ -186,7 +187,7 @@ hide_timeout_ms = 0
 # "Mod+Shift+Right" = "column-move-right"
 
 # Window state and layout
-"Mod+Alt+P" = { action = "window-toggle-floating", repeat = false }
+"Mod+Alt+Space" = { action = "window-toggle-floating", repeat = false }
 "Mod+Shift+Space" = { action = "window-focus-switch-floating", repeat = false }
 # "Mod+P" = { action = "window-toggle-pinned", repeat = false }
 # "Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
