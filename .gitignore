@@ -1,0 +1,6 @@
+# Absolute Golden Rule: Never track hardware layout or drive UUIDs
+hardware-configuration.nix
+
+# Secrets (Add any age, sops, or raw token files you use)
+*.secret
+secrets/

@@ -1,0 +1,11 @@
+[shell]
+polkit_agent = true
+
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["cava" , "foot" , "gtk3" , "gtk4" , "qt" , "kitty"]
+enable_community_templates = true
+# community_templates = ["brave", "brave-origin" , "fastfetch", "discord"]
+
+[widget.clipboard]
+glyph = "clipboard-list"
