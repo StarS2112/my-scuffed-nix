@@ -19,6 +19,8 @@
     };
   };
 };
+  programs.fish.enable = true;
+  xdg.configFile."fish".source = ./config/fish;
   xdg.configFile."fastfetch".source = ./config/fastfetch;
   xdg.configFile."kitty".source = ./config/kitty;
   xdg.configFile."noctalia".source = ./config/noctalia;

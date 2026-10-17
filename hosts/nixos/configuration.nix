@@ -168,6 +168,8 @@
     gvfs
     pciutils
     ffmpeg-full
+    starship
+    eza
     mpv
     imv
     qpwgraph
