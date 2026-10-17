@@ -109,7 +109,7 @@
     "break",
     {
       "type": "custom",
-      "format": "\u001b[90m╭────────────────Age / Uptime / Update───────────────╮"
+      "format": "\u001b[90m╭────────────────Age / Uptime────────────────────────╮"
     },
     {
       "type": "command",
@@ -121,12 +121,6 @@
       "type": "uptime",
       "key": "󱫐 Uptime",
       "keyColor": "magenta"
-    },
-    {
-     "type": "command",
-     "key": " Update",
-     "keyColor": "magenta",
-     "text": "cache=~/.cache/fastfetch-updates.txt; if [ ! -f \"$cache\" ] || [ $(find \"$cache\" -mmin +30) ]; then pac=$(pacman -Qu | wc -l); aur=$(yay -Qu 2>/dev/null | wc -l || echo 0); fp=$(flatpak remote-ls --updates 2>/dev/null | wc -l || echo 0); echo \"$pac|$aur|$fp\" > \"$cache\"; else cat \"$cache\"; fi | awk -F'|' '{printf \"pacman: %s | AUR: %s | flatpak: %s\", $1, $2, $3}'"
     },
     {
       "type": "custom",
