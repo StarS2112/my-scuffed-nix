@@ -136,6 +136,14 @@ follows_focus = false
 hide_when_typing = false
 hide_timeout_ms = 0
 
+# [input.tablet]
+# enabled = false
+# # map_to_output = "DP-1"
+# # map_to_focused_output = false
+# # map_to_focused_window = false
+# # left_handed = false
+# # calibration_matrix = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+
 # ==============================================================================
 # Keybinds
 # Defining this table replaces the built-in bind set, so every active bind that
