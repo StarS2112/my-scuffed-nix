@@ -32,6 +32,3 @@ if status is-interactive
         alias ssh 'kitten ssh'
     end
 end
-
-source ~/.config/fish/auto-Hypr.fish
-/home/linuxbrew/.linuxbrew/bin/brew shellenv | source

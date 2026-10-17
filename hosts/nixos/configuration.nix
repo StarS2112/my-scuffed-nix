@@ -12,6 +12,8 @@
       inputs.nixcord.nixosModules.nixcord
      ];
   
+  programs.fish.enable = true;
+
   programs.nixcord = {
     enable = false;
     user = "stars";
@@ -112,6 +114,7 @@
     description = "stars-nix";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.fish;
   };
 
   # Allow unfree packages
@@ -243,6 +246,7 @@
 
 
   environment.shellAliases = {
+    rebuild-force =  "sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";
     rebuild-etc = "sudo nixos-rebuild switch";
     rebuild = "git -C ~/nixos-config add . && sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";
     update = "nix flake update --flake ~/nixos-config";
