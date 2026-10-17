@@ -1,4 +1,4 @@
-l# Edit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
@@ -47,11 +47,17 @@ l# Edit this configuration file to define what should be installed on
 
   #drivers
   hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;\
+  hardware.graphics.enable32Bit = true;
   hardware.uinput.enable = true;
+
+  #opentabletdriver stuff
   boot.kernelModules = [ "uinput" ];
   hardware.opentabletdriver.enable = true;
-
+  hardware.opentabletdriver.daemon.enable = true;
+  hardware.opentabletdriver.blacklistedKernelModules = [
+    "hid-uclogic"
+    "wacom"
+  ];
 
   #audio
   services.pipewire = {
