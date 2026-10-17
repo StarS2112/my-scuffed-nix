@@ -250,6 +250,7 @@
     edit-flake = "kate ~/nixos-config/flake.nix";
     edit-home = "kate ~/nixos-config/home/home.nix";
     push-conf = "git -C ~/nixos-config add . && echo 'Enter commit message:' && read msg && git -C ~/nixos-config commit -m \"$msg\" && git -C ~/nixos-config push origin master";
+    pull-conf = "git -C ~/nixos-config pull origin master";
   };
 
   systemd.tmpfiles.rules = [
