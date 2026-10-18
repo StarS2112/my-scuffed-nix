@@ -193,6 +193,8 @@
     gvfs
     pciutils
     ffmpeg-full
+    v4l-utils
+    guvcview
     starship
     eza
     mpv

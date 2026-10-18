@@ -1,0 +1,209 @@
+13:12:56.930: Platform: Wayland
+13:12:56.931: CPU Name: AMD Ryzen 5 5600 6-Core Processor
+13:12:56.931: CPU Speed: 1750.500MHz
+13:12:56.931: Physical Cores: 6, Logical Cores: 12
+13:12:56.931: Physical Memory: 32019MB Total, 6287MB Free
+13:12:56.931: Kernel Version: Linux 6.18.55
+13:12:56.931: Distribution: NixOS "26.11"
+13:12:56.931: Desktop Environment: umbriel (umbriel)
+13:12:56.931: Session Type: wayland
+13:12:56.932: Current Date/Time: 2026-10-18, 01:12:56 PM
+13:12:56.932: Browser Hardware Acceleration: true
+13:12:56.932: Qt Version: 6.11.2 (runtime), 6.11.2 (compiled)
+13:12:56.932: Portable mode: false
+13:12:56.956: OBS 32.2.2 (linux)
+13:12:56.956: ---------------------------------
+13:12:56.957: ---------------------------------
+13:12:56.957: audio settings reset:
+13:12:56.957: 	samples per sec: 48000
+13:12:56.957: 	speakers:        2
+13:12:56.957: 	max buffering:   960 milliseconds
+13:12:56.957: 	buffering type:  dynamically increasing
+13:12:56.958: ---------------------------------
+13:12:56.958: Initializing OpenGL...
+13:12:56.958: Using EGL/Wayland
+13:12:56.988: Initialized EGL 1.5
+13:12:57.000: Loading up OpenGL on adapter AMD AMD Radeon RX 550 / 550 Series (radeonsi, polaris12, ACO, DRM 3.64, 6.18.55)
+13:12:57.000: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 26.2.4, shading language 4.60
+13:12:57.023: ---------------------------------
+13:12:57.023: video settings reset:
+13:12:57.023: 	base resolution:   1920x1080
+13:12:57.023: 	output resolution: 1920x1080
+13:12:57.023: 	downscale filter:  Bicubic
+13:12:57.023: 	fps:               60/1
+13:12:57.023: 	format:            NV12
+13:12:57.023: 	YUV mode:          Rec. 709/Partial
+13:12:57.024: NV12 texture support enabled
+13:12:57.024: P010 texture support not available
+13:12:57.025: Audio monitoring device:
+13:12:57.025: 	name: Default
+13:12:57.025: 	id: default
+13:12:57.026: ---------------------------------
+13:12:57.027: Failed to load 'en-US' text for module: 'decklink-captions.so'
+13:12:57.027: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+13:12:57.028: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+13:12:57.028: Failed to initialize module 'decklink.so'
+13:12:57.143: [pipewire] Available capture sources:
+13:12:57.143: [pipewire]     - Monitor source
+13:12:57.143: [pipewire]     - Window source
+13:12:57.148: v4l2loopback not installed, virtual camera not registered
+13:12:57.150: [obs-browser]: Version 2.26.9
+13:12:57.150: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.0.0-6533-fix-stutter-and-osr-extra-info.3042+g176b09c+chromium-127.0.6533.120 (compiled)
+13:12:57.156: VAAPI: API version 1.24
+13:12:57.157: FFmpeg VAAPI H264 encoding supported
+13:12:57.161: FFmpeg VAAPI AV1 encoding not supported
+13:12:57.165: FFmpeg VAAPI HEVC encoding supported
+13:12:57.169: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+13:12:57.169: 
+13:12:57.169: NVENC not supported
+13:12:57.169: Failed to initialize module 'obs-nvenc.so'
+13:12:57.189: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.4 | RPC Version: 1)
+13:12:57.189: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.2 | Qt version (run-time): 6.11.2
+13:12:57.189: [obs-websocket] [obs_module_load] Linked ASIO Version: 103800
+13:12:57.193: [obs-websocket] [obs_module_load] Module loaded.
+13:12:57.196: [vlc-video]: VLC 3.0.24 Vetinari found, VLC video source enabled
+13:12:57.198: [linux-vkcapture] plugin loaded successfully (version 1.5.6)
+13:12:57.232: [obs-backgroundremoval] Plugin loaded successfully (version 1.4.1)
+13:12:57.232: [obs-backgroundremoval] Failed to open config file /home/stars/.config/obs-studio/plugin_config/obs-backgroundremoval/config.ini
+13:12:57.232: [obs-backgroundremoval] Failed to open config file /home/stars/.config/obs-studio/plugin_config/obs-backgroundremoval/config.ini
+13:12:57.539: [obs-backgroundremoval] Latest release is 1.4.1
+13:12:57.544: [obs-gstreamer] build: 0.4.1, gst-runtime: 1.28.7
+13:12:57.548: [obs-vaapi] version: undefined, gst-runtime: 1.28.7
+13:12:57.548: [obs-vaapi] found vah265enc
+13:12:57.548: [obs-vaapi] found vah264enc
+13:12:57.548: ---------------------------------
+13:12:57.549:   Loaded Modules:
+13:12:57.549:     obs-vaapi.so
+13:12:57.549:     obs-gstreamer.so
+13:12:57.549:     obs-backgroundremoval.so
+13:12:57.549:     linux-vkcapture.so
+13:12:57.549:     linux-pipewire-audio.so
+13:12:57.549:     libwlrobs.so
+13:12:57.549:     vlc-video.so
+13:12:57.549:     text-freetype2.so
+13:12:57.549:     rtmp-services.so
+13:12:57.549:     obs-x264.so
+13:12:57.549:     obs-websocket.so
+13:12:57.549:     obs-webrtc.so
+13:12:57.549:     obs-vst.so
+13:12:57.549:     obs-transitions.so
+13:12:57.549:     obs-qsv11.so
+13:12:57.549:     obs-outputs.so
+13:12:57.549:     obs-libfdk.so
+13:12:57.549:     obs-filters.so
+13:12:57.549:     obs-ffmpeg.so
+13:12:57.549:     obs-browser.so
+13:12:57.549:     linux-v4l2.so
+13:12:57.549:     linux-pulseaudio.so
+13:12:57.549:     linux-pipewire.so
+13:12:57.549:     linux-jack.so
+13:12:57.549:     linux-capture.so
+13:12:57.549:     linux-alsa.so
+13:12:57.549:     image-source.so
+13:12:57.549:     frontend-tools.so
+13:12:57.549:     decklink-output-ui.so
+13:12:57.549:     decklink-captions.so
+13:12:57.549: ---------------------------------
+13:12:57.549: ---------------------------------
+13:12:57.549: Available Encoders:
+13:12:57.549:   Video Encoders:
+13:12:57.549: 	- ffmpeg_svt_av1 (SVT-AV1)
+13:12:57.549: 	- ffmpeg_aom_av1 (AOM AV1)
+13:12:57.549: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+13:12:57.549: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+13:12:57.549: 	- obs_x264 (x264)
+13:12:57.554: 	- obs-va-vah265enc (VAAPI H.265 on Lexa PRO [Radeon 540/540X/550/550X / RX 540X/550/550X])
+13:12:57.559: 	- obs-va-vah264enc (VAAPI H.264 on Lexa PRO [Radeon 540/540X/550/550X / RX 540X/550/550X])
+13:12:57.559:   Audio Encoders:
+13:12:57.559: 	- ffmpeg_aac (FFmpeg AAC)
+13:12:57.559: 	- ffmpeg_opus (FFmpeg Opus)
+13:12:57.559: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+13:12:57.559: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+13:12:57.559: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+13:12:57.559: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+13:12:57.559: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+13:12:57.559: 	- libfdk_aac (libfdk AAC)
+13:12:57.559: ==== Startup complete ===============================================
+13:12:57.577: Failed to register with host portal QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")
+13:12:57.577: All scene data cleared
+13:12:57.577: ------------------------------------------------
+13:12:57.581: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+13:12:57.581: Deduplication logic is being applied to all monitored sources.
+13:12:57.582: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.9) 15.0.0'
+13:12:57.582: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+13:12:57.582: pulse-input: Started recording from 'alsa_output.pci-0000_0a_00.4.analog-stereo.monitor' (default)
+13:12:57.582: [Loaded global audio device]: 'Desktop Audio'
+13:12:57.582: pulse-input: Server name: 'PulseAudio (on PipeWire 1.6.9) 15.0.0'
+13:12:57.582: pulse-input: Audio format: s16le, 48000 Hz, 1 channels
+13:12:57.582: pulse-input: Started recording from 'alsa_input.usb-0c76_Razer_Seiren_Mini-00.mono-fallback' (default)
+13:12:57.582: [Loaded global audio device]: 'Mic/Aux'
+13:12:57.582: PipeWire initialized
+13:12:57.583: Switched to scene 'Scene'
+13:12:57.583: ------------------------------------------------
+13:12:57.583: Loaded scenes:
+13:12:57.583: - scene 'Scene':
+13:12:57.583:     - source: 'Screen Capture (PipeWire)' (pipewire-screen-capture-source)
+13:12:57.583: ------------------------------------------------
+13:12:57.596: Device for 'Audio Output Capture' source Desktop Audio is also used for audio monitoring.
+13:12:57.596: Deduplication logic is being applied to all monitored sources.
+13:12:57.657: [pipewire] Screencast session created
+13:12:57.671: [pipewire] Asking for monitor and window
+13:12:57.717: [pipewire] source selected, setting up screencast
+13:12:57.722: [pipewire] Server version: 1.6.9
+13:12:57.722: [pipewire] Library version: 1.6.9
+13:12:57.722: [pipewire] Header version: 1.6.9
+13:12:57.722: [pipewire] Created stream 0x59da8c2c9bc0
+13:12:57.722: [pipewire] Stream 0x59da8c2c9bc0 state: "connecting" (error: none)
+13:12:57.722: [pipewire] Playing stream 0x59da8c2c9bc0
+13:12:57.723: [pipewire] Stream 0x59da8c2c9bc0 state: "paused" (error: none)
+13:12:57.726: [pipewire] Negotiated format:
+13:12:57.726: [pipewire]     Format: 12 (Spa:Enum:VideoFormat:BGRA)
+13:12:57.726: [pipewire]     Modifier: 0xffffffffffffff
+13:12:57.726: [pipewire]     Size: 1920x1080
+13:12:57.726: [pipewire]     Framerate: 60/1
+13:12:57.728: [pipewire] Stream 0x59da8c2c9bc0 state: "streaming" (error: none)
+13:12:58.130: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+13:12:58.130: 
+13:13:02.514: v4l2-input: Start capture from 
+13:13:02.515: v4l2-input: Unable to open device
+13:13:02.515: v4l2-input: Initialization failed, errno: No such file or directory
+13:13:02.516: User added source 'Video Capture Device (V4L2)' (v4l2_input) to scene 'Scene'
+13:13:02.625: v4l2-input: Found device 'WebCamera: WebCamera' at /dev/video1
+13:13:02.626: v4l2-input: /dev/video2 seems to not support video capture
+13:13:02.628: v4l2-input: Found input 'Camera 1' (Index 0)
+13:13:02.632: v4l2-controls: setting default for Power Line Frequency to 1
+13:13:02.636: v4l2-controls: setting default for Auto Exposure to 0
+13:13:02.639: v4l2-input: Pixelformat: Motion-JPEG (available)
+13:13:02.639: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+13:13:02.639: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+13:13:02.639: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+13:13:02.639: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+13:13:02.639: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+13:13:02.641: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+13:13:02.642: v4l2-input: Start capture from /dev/video1
+13:13:02.642: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+13:13:02.644: v4l2-input: Input: 0
+13:13:02.644: v4l2-input: Resolution: 1280x720
+13:13:02.644: v4l2-input: Pixelformat: MJPG
+13:13:02.645: v4l2-input: Linesize: 0 Bytes
+13:13:02.645: v4l2-input: Framerate: 30.00 fps
+13:13:02.645: v4l2-input: Pixelformat: Motion-JPEG (available)
+13:13:02.646: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+13:13:02.646: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+13:13:02.646: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+13:13:02.646: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+13:13:02.646: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+13:13:02.647: v4l2-input: /dev/video1: select timeout set to 166666 (5x frame periods)
+13:13:02.719: v4l2-input: /dev/video1: Stopped capture after 0 frames
+13:13:02.719: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+13:13:02.725: v4l2-input: Start capture from /dev/video1
+13:13:02.727: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+13:13:02.727: v4l2-input: Input: 0
+13:13:02.728: v4l2-input: Resolution: 1280x720
+13:13:02.728: v4l2-input: Pixelformat: MJPG
+13:13:02.728: v4l2-input: Linesize: 0 Bytes
+13:13:02.728: v4l2-input: Framerate: 30.00 fps
+13:13:02.729: v4l2-input: /dev/video1: select timeout set to 166666 (5x frame periods)
+13:13:02.801: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+13:13:02.967: v4l2-input: /dev/video1: select timed out
+13:13:02.967: v4l2-input: /dev/video1: failed to log status
