@@ -53,6 +53,11 @@
     ];
   };
 
+  programs.gpu-screen-recorder = {
+    enable = true;
+    ui.enable = true; # For overlay
+  };
+
   programs.umbriel.enable = true;
   programs.nix-ld.enable = true;
 
@@ -90,7 +95,7 @@
 
   #use Wayland for electron/chromium stuff
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables. QT_QPA_PLATFORMTHEME = "gtk3";
+  environment.sessionVariables. QT_QPA_PLATFORMTHEME = "kde";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -179,6 +184,7 @@
     kdePackages.dolphin
     kdePackages.kate
     kdePackages.ktexteditor
+    kdePackages.kio
     kdePackages.kio-extras
     kdePackages.kio-fuse
     kdePackages.kio-admin
@@ -186,8 +192,7 @@
     kdePackages.ffmpegthumbs
     kdePackages.qt6ct
     kdePackages.plasma-integration
-    glib
-    gsettings-desktop-schemas
+    dconf
     bibata-cursors-translucent
     bibata-cursors
     android-tools

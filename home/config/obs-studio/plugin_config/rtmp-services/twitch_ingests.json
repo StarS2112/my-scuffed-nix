@@ -31,18 +31,18 @@
             "_id": 3,
             "availability": 1.0,
             "default": false,
-            "name": "Asia Pacific (Mumbai)",
-            "url_template": "rtmp://aps30.contribute.live-video.net/app/{stream_key}",
-            "url_template_secure": "rtmps://aps30.contribute.live-video.net/app/{stream_key}",
+            "name": "Asia Pacific (Tokyo)",
+            "url_template": "rtmp://apn10.contribute.live-video.net/app/{stream_key}",
+            "url_template_secure": "rtmps://apn10.contribute.live-video.net/app/{stream_key}",
             "priority": 3
         },
         {
             "_id": 4,
             "availability": 1.0,
             "default": false,
-            "name": "Asia Pacific (Tokyo)",
-            "url_template": "rtmp://apn10.contribute.live-video.net/app/{stream_key}",
-            "url_template_secure": "rtmps://apn10.contribute.live-video.net/app/{stream_key}",
+            "name": "Asia Pacific (Mumbai)",
+            "url_template": "rtmp://aps30.contribute.live-video.net/app/{stream_key}",
+            "url_template_secure": "rtmps://aps30.contribute.live-video.net/app/{stream_key}",
             "priority": 4
         },
         {

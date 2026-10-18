@@ -163,6 +163,9 @@ hide_timeout_ms = 0
 #keybindlock
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
+# ScreenRecorder
+"Mod+Shift+R" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
+
 # Screenshot
 "Mod+Shift+S" = { action = "spawn:noctalia msg screenshot-region", allow_when_locked = true }
 
@@ -375,6 +378,6 @@ action = "overview-open"
 # effect = "workspace_wipe"
 # duration_ms = 300
 # curve = "easeout"
-
-[environment]
-QT_QPA_PLATFORMTHEME = "qt6ct"
+#
+# [environment]
+# QT_QPA_PLATFORMTHEME = "qt6ct"
