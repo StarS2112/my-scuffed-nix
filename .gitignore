@@ -4,3 +4,14 @@ hardware-configuration.nix
 # Secrets (Add any age, sops, or raw token files you use)
 *.secret
 secrets/
+# Kate swap files
+*.kate-swp
+.*.kate-swp
+*.swp
+*.swo
+*~
+
+# OBS Studio
+home/config/obs-studio/logs/
+home/config/obs-studio/profiler_data/
+home/config/obs-studio/.sentinel/
