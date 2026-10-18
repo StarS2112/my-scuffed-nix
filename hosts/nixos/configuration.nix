@@ -90,7 +90,7 @@
 
   #use Wayland for electron/chromium stuff
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  environment.sessionVariables. QT_QPA_PLATFORMTHEME = "kde";
+  environment.sessionVariables. QT_QPA_PLATFORMTHEME = "gtk3";
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -186,7 +186,8 @@
     kdePackages.ffmpegthumbs
     kdePackages.qt6ct
     kdePackages.plasma-integration
-    kdePackages.xdg-desktop-portal-kde
+    glib
+    gsettings-desktop-schemas
     bibata-cursors-translucent
     bibata-cursors
     android-tools
@@ -229,13 +230,12 @@
   enable = true;
   xdgOpenUsePortal = true;
   extraPortals = with pkgs; [
-    kdePackages.xdg-desktop-portal-kde
     xdg-desktop-portal-gtk
   ];
   config = {
     common = {
-      default = [ "kde" "gtk" ];
-      "org.freedesktop.portal.FileChooser" = [ "kde" ];
+      default = [ "gtk" ];
+      "org.freedesktop.portal.FileChooser" = [ "gtk" ];
     };
   };
 };
