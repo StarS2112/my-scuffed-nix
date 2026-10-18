@@ -15,3 +15,12 @@ secrets/
 home/config/obs-studio/logs/
 home/config/obs-studio/profiler_data/
 home/config/obs-studio/.sentinel/
+home/config/obs-studio/plugin_config/obs-browser/
+home/config/obs-studio/logs/
+*.bak
+home/config/obs-studio/plugin_config/obs-browser/
+home/config/obs-studio/logs/
+*.bak
+home/config/obs-studio/plugin_config/obs-browser/
+home/config/obs-studio/logs/
+*.bak
