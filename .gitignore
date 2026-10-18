@@ -24,3 +24,9 @@ home/config/obs-studio/logs/
 home/config/obs-studio/plugin_config/obs-browser/
 home/config/obs-studio/logs/
 *.bak
+home/config/obs-studio/.sentinel/
+home/config/obs-studio/logs/
+home/config/obs-studio/plugin_config/
+home/config/obs-studio/plugin_manager/
+home/config/obs-studio/profiler_data/
+*.bak
