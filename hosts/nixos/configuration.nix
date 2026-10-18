@@ -60,6 +60,7 @@
 
   programs.umbriel.enable = true;
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ icu openssl zlib ];
 
   services.udisks2.enable = true;
   services.gvfs.enable = true;   
@@ -221,11 +222,13 @@
   nix.settings = {
     extra-substituters = [ 
       "https://noctalia.cachix.org"
-      "https://nix-gaming.cachix.org"   
+      "https://nix-gaming.cachix.org"
+      "https://attic.xuyh0120.win/lantian"
     ];
     extra-trusted-public-keys = [ 
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" 
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
+      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
      ];
   };
  
@@ -233,17 +236,9 @@
 
   xdg.portal = {
   enable = true;
-  xdgOpenUsePortal = true;
-  extraPortals = with pkgs; [
-    xdg-desktop-portal-gtk
-  ];
-  config = {
-    common = {
-      default = [ "gtk" ];
-      "org.freedesktop.portal.FileChooser" = [ "gtk" ];
-    };
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  config.common.default = [ "umbriel" "gtk" ];
   };
-};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
