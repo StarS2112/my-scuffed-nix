@@ -27,6 +27,7 @@
   xdg.configFile."fastfetch".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/fastfetch";
   xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/kitty";
   xdg.configFile."noctalia".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/noctalia";
+  xdg.configFile."obs-studio".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/obs-studio";
   xdg.configFile."umbriel".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/umbriel";
   xdg.configFile."starship.toml".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/starship/starship.toml";
 }
