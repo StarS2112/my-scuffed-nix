@@ -186,6 +186,7 @@
     kdePackages.ffmpegthumbs
     kdePackages.qt6ct
     kdePackages.plasma-integration
+    kdePackages.xdg-desktop-portal-kde
     bibata-cursors-translucent
     bibata-cursors
     android-tools
@@ -194,7 +195,6 @@
     pciutils
     ffmpeg-full
     v4l-utils
-    guvcview
     starship
     eza
     mpv
@@ -227,8 +227,18 @@
 
   xdg.portal = {
   enable = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  }; 
+  xdgOpenUsePortal = true;
+  extraPortals = with pkgs; [
+    kdePackages.xdg-desktop-portal-kde
+    xdg-desktop-portal-gtk
+  ];
+  config = {
+    common = {
+      default = [ "kde" "gtk" ];
+      "org.freedesktop.portal.FileChooser" = [ "kde" ];
+    };
+  };
+};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
