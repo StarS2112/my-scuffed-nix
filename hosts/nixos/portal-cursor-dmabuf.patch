@@ -1,0 +1,301 @@
+diff --git a/meson.build b/meson.build
+index d29a781..96ae666 100644
+--- a/meson.build
++++ b/meson.build
+@@ -101,6 +101,31 @@ executable(
+   install_dir: get_option('libexecdir'),
+ )
+ 
++# --- tests -------------------------------------------------------------------
++
++if get_option('tests')
++  buffer_params_test = executable(
++    'pipewire-buffer-params-test',
++    'tests/pipewire_buffer_params.cpp',
++    include_directories: include_directories('src'),
++    dependencies: [pipewire_dep, wayland_client_dep, libdrm_dep, gbm_dep],
++    cpp_args: ['-ffunction-sections', '-fdata-sections'],
++    link_args: [
++      '-Wl,--gc-sections',
++      '-Wl,--wrap=gbm_device_get_format_modifier_plane_count',
++      '-Wl,--wrap=gbm_bo_create_with_modifiers2',
++      '-Wl,--wrap=gbm_bo_create_with_modifiers',
++      '-Wl,--wrap=gbm_bo_create',
++      '-Wl,--wrap=gbm_bo_get_modifier',
++      '-Wl,--wrap=gbm_bo_get_plane_count',
++      '-Wl,--wrap=gbm_bo_destroy',
++      '-Wl,--wrap=gbm_device_destroy',
++      '-Wl,--wrap=pw_stream_update_params',
++    ],
++  )
++  test('pipewire-buffer-params', buffer_params_test)
++endif
++
+ # --- picker ------------------------------------------------------------------
+ 
+ if gtk4_dep.found()
+diff --git a/meson_options.txt b/meson_options.txt
+index 9661bbe..9202425 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -1 +1,2 @@
+ option('picker', type: 'feature', value: 'auto', description: 'Build the GTK4 share picker')
++option('tests', type: 'boolean', value: true, description: 'Build regression tests')
+diff --git a/nix/package.nix b/nix/package.nix
+index dd48b39..03fa43b 100644
+--- a/nix/package.nix
++++ b/nix/package.nix
+@@ -49,6 +49,7 @@ stdenv.mkDerivation {
+   ];
+ 
+   mesonBuildType = "release";
++  doCheck = true;
+ 
+   meta = with lib; {
+     description = "xdg-desktop-portal backend for the Umbriel compositor";
+diff --git a/src/pipewire/pipewire.cpp b/src/pipewire/pipewire.cpp
+index 4d4eaa1..b153170 100644
+--- a/src/pipewire/pipewire.cpp
++++ b/src/pipewire/pipewire.cpp
+@@ -19,6 +19,7 @@
+ #include <pipewire/properties.h>
+ #include <pipewire/stream.h>
+ #include <pipewire/version.h>
++#include <print>
+ #include <spa/buffer/alloc.h>
+ #include <spa/buffer/meta.h>
+ #include <spa/param/buffers.h>
+@@ -244,6 +245,27 @@ namespace xdpu {
+       return bo;
+     }
+ 
++    int dmabufPlaneCount(const FormatChoice& choice) {
++      if (!ensureGbmDevice()) {
++        return -1;
++      }
++      // An implicit layout has no modifier to query. Some drivers also cannot
++      // query explicit layouts which they can nevertheless allocate.
++      if (choice.modifier != DRM_FORMAT_MOD_INVALID) {
++        const int planes = gbm_device_get_format_modifier_plane_count(gbm, choice.drm, choice.modifier);
++        if (planes > 0) {
++          return planes;
++        }
++      }
++      gbm_bo* bo = createDmabufBo(choice.drm, choice.modifier);
++      if (bo == nullptr) {
++        return -1;
++      }
++      const int planes = gbm_bo_get_modifier(bo) == choice.modifier ? gbm_bo_get_plane_count(bo) : -1;
++      gbm_bo_destroy(bo);
++      return planes;
++    }
++
+     bool supportsDmabuf(uint32_t format, uint64_t modifier) {
+       if (!ensureGbmDevice()) {
+         return false;
+@@ -403,7 +425,7 @@ namespace xdpu {
+       }
+     }
+ 
+-    void updateBufferParams(const FormatChoice& choice) {
++    bool updateBufferParams(const FormatChoice& choice) {
+       std::array<uint8_t, 512> buffersStorage{};
+       std::array<uint8_t, 256> headerMetaStorage{};
+       std::array<uint8_t, 256> cursorMetaStorage{};
+@@ -414,11 +436,13 @@ namespace xdpu {
+       const uint32_t stride = choice.dmabuf ? 0 : width * bytesPerPixel(choice.drm);
+       const uint32_t size = stride * height;
+       const int dataTypes = choice.dmabuf ? (1 << SPA_DATA_DmaBuf) : (1 << SPA_DATA_MemFd);
+-      const int blocks =
+-          choice.dmabuf ? gbm_device_get_format_modifier_plane_count(gbm, choice.drm, choice.modifier) : 1;
++      const int blocks = choice.dmabuf ? dmabufPlaneCount(choice) : 1;
+       if (blocks <= 0) {
+-        fprintf(stderr, "pipewire: invalid plane count for negotiated DMA-BUF format\n");
+-        return;
++        std::println(
++            stderr, "pipewire: cannot determine plane count for DMA-BUF format 0x{:08x} modifier 0x{:016x}", choice.drm,
++            choice.modifier
++        );
++        return false;
+       }
+ 
+       spa_pod_frame buffersFrame;
+@@ -451,7 +475,7 @@ namespace xdpu {
+             SPA_POD_Id(SPA_META_Cursor), SPA_PARAM_META_size, SPA_POD_Int(static_cast<int32_t>(kCursorMetaSize))
+         ));
+       }
+-      pw_stream_update_params(stream, params.data(), paramCount);
++      return pw_stream_update_params(stream, params.data(), paramCount) >= 0;
+     }
+   };
+ 
+@@ -580,7 +604,10 @@ namespace xdpu {
+         impl.width = info.size.width;
+         impl.height = info.size.height;
+       }
+-      impl.updateBufferParams(impl.negotiated);
++      if (!impl.updateBufferParams(impl.negotiated)) {
++        impl.negotiated.valid = false;
++        pw_stream_set_error(impl.stream, -EIO, "Unable to configure capture buffers");
++      }
+     }
+ 
+     void onStreamAddBuffer(void* data, pw_buffer* buffer) {
+diff --git a/tests/pipewire_buffer_params.cpp b/tests/pipewire_buffer_params.cpp
+new file mode 100644
+index 0000000..c8aa553
+--- /dev/null
++++ b/tests/pipewire_buffer_params.cpp
+@@ -0,0 +1,152 @@
++// Exercise the production parameter builder with controlled GBM responses.
++// Function sections let this test link without the unused Wayland/DBus paths.
++#include "pipewire/pipewire.cpp"
++
++#include <cstdlib>
++
++namespace {
++  struct Fixture {
++    int queryResult = 1;
++    int bufferPlanes = 1;
++    uint64_t modifier = DRM_FORMAT_MOD_INVALID;
++    bool allocationFails = false;
++    bool legacyOnly = false;
++    bool modifierMismatch = false;
++    int updateResult = 0;
++    int queries = 0;
++    int allocations = 0;
++    int destroys = 0;
++    int updates = 0;
++    int blocks = 0;
++    int cursorBytes = 0;
++  } fixture;
++
++  // Opaque sentinels: wrappers never dereference these addresses.
++  char deviceStorage;
++  char bufferStorage;
++
++  void require(bool condition, const char* message) {
++    if (!condition) {
++      std::fprintf(stderr, "%s\n", message);
++      std::exit(EXIT_FAILURE);
++    }
++  }
++
++  gbm_bo* allocate(bool legacy) {
++    ++fixture.allocations;
++    return fixture.allocationFails || (fixture.legacyOnly && !legacy) ? nullptr
++                                                                      : reinterpret_cast<gbm_bo*>(&bufferStorage);
++  }
++
++  bool configure(bool dmabuf = true, bool cursorMetadata = true) {
++    xdpu::PipeWireStream::Impl impl(1920, 1080, {}, 60, cursorMetadata);
++    impl.gbm = reinterpret_cast<gbm_device*>(&deviceStorage);
++    const xdpu::FormatChoice choice{
++        .drm = DRM_FORMAT_XRGB8888,
++        .valid = true,
++        .spa = SPA_VIDEO_FORMAT_BGRx,
++        .modifier = fixture.modifier,
++        .dmabuf = dmabuf,
++    };
++    return impl.updateBufferParams(choice);
++  }
++
++  void cursorPresent(int planes) {
++    require(fixture.updates == 1, "capture parameters were not published exactly once");
++    require(fixture.blocks == planes, "negotiated block count differs from the allocation");
++    require(fixture.cursorBytes == static_cast<int>(xdpu::kCursorMetaSize), "cursor metadata was omitted");
++  }
++} // namespace
++
++extern "C" {
++int __wrap_gbm_device_get_format_modifier_plane_count(gbm_device*, uint32_t, uint64_t) {
++  ++fixture.queries;
++  return fixture.queryResult;
++}
++gbm_bo*
++__wrap_gbm_bo_create_with_modifiers2(gbm_device*, uint32_t, uint32_t, uint32_t, const uint64_t*, unsigned, uint32_t) {
++  return allocate(false);
++}
++gbm_bo* __wrap_gbm_bo_create_with_modifiers(gbm_device*, uint32_t, uint32_t, uint32_t, const uint64_t*, unsigned) {
++  return allocate(false);
++}
++gbm_bo* __wrap_gbm_bo_create(gbm_device*, uint32_t, uint32_t, uint32_t, uint32_t) { return allocate(true); }
++uint64_t __wrap_gbm_bo_get_modifier(gbm_bo*) {
++  return fixture.modifierMismatch ? DRM_FORMAT_MOD_LINEAR : fixture.modifier;
++}
++int __wrap_gbm_bo_get_plane_count(gbm_bo*) { return fixture.bufferPlanes; }
++void __wrap_gbm_bo_destroy(gbm_bo*) { ++fixture.destroys; }
++void __wrap_gbm_device_destroy(gbm_device*) {}
++int __wrap_pw_stream_update_params(pw_stream*, const spa_pod** params, uint32_t count) {
++  ++fixture.updates;
++  for (uint32_t i = 0; i < count; ++i) {
++    if (SPA_POD_OBJECT_ID(params[i]) == SPA_PARAM_Buffers) {
++      spa_pod_parse_object(
++          params[i], SPA_TYPE_OBJECT_ParamBuffers, nullptr, SPA_PARAM_BUFFERS_blocks, SPA_POD_Int(&fixture.blocks)
++      );
++    } else if (SPA_POD_OBJECT_ID(params[i]) == SPA_PARAM_Meta) {
++      uint32_t type = 0;
++      int bytes = 0;
++      spa_pod_parse_object(
++          params[i], SPA_TYPE_OBJECT_ParamMeta, nullptr, SPA_PARAM_META_type, SPA_POD_Id(&type), SPA_PARAM_META_size,
++          SPA_POD_Int(&bytes)
++      );
++      if (type == SPA_META_Cursor)
++        fixture.cursorBytes = bytes;
++    }
++  }
++  return fixture.updateResult;
++}
++}
++
++int main() {
++  // The implicit modifier is not queryable; use the buffer's actual plane count.
++  fixture = {.queryResult = -1, .bufferPlanes = 1, .legacyOnly = true};
++  require(configure(), "implicit DMA-BUF setup failed");
++  cursorPresent(1);
++  require(
++      fixture.queries == 0 && fixture.allocations == 3 && fixture.destroys == 1,
++      "implicit allocation fallback or lifetime is incorrect"
++  );
++
++  // Recover query failures for allocatable explicit formats without guessing
++  // one plane: compressed layouts can need an auxiliary plane.
++  for (int query : {0, -1}) {
++    fixture = {.queryResult = query, .bufferPlanes = 2, .modifier = DRM_FORMAT_MOD_LINEAR};
++    require(configure(), "allocatable explicit DMA-BUF setup failed");
++    cursorPresent(2);
++    require(fixture.queries == 1 && fixture.destroys == 1, "fallback buffer was not released");
++  }
++
++  fixture = {.queryResult = 2, .modifier = DRM_FORMAT_MOD_LINEAR};
++  require(configure(), "queryable explicit DMA-BUF setup failed");
++  cursorPresent(2);
++  require(fixture.allocations == 0, "working explicit queries should not allocate a probe buffer");
++
++  fixture = {.allocationFails = true};
++  require(!configure() && fixture.updates == 0, "unallocatable format published incomplete parameters");
++  require(fixture.destroys == 0, "failed allocation destroyed a nonexistent buffer");
++
++  fixture = {.bufferPlanes = 0};
++  require(!configure() && fixture.updates == 0, "invalid buffer plane count was accepted");
++  require(fixture.destroys == 1, "invalid buffer leaked");
++
++  fixture = {.modifierMismatch = true};
++  require(!configure() && fixture.updates == 0, "a different buffer modifier was accepted");
++  require(fixture.destroys == 1, "mismatched buffer leaked");
++
++  fixture = {};
++  require(configure(false), "shared-memory setup failed");
++  cursorPresent(1);
++  require(fixture.queries == 0 && fixture.allocations == 0, "shared-memory setup used GBM");
++
++  fixture = {};
++  require(configure(false, false), "hidden/embedded cursor setup failed");
++  require(fixture.cursorBytes == 0, "cursor metadata was advertised when not requested");
++
++  fixture = {.updateResult = -EIO};
++  require(!configure(false), "PipeWire parameter update failure was ignored");
++  std::puts(
++      "PipeWire buffer negotiation: implicit layouts, query failures, plane counts, cursor metadata and errors passed"
++  );
++}

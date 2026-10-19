@@ -71,16 +71,16 @@
             "versioned_id": "v4l2_input",
             "settings": {
                 "device_id": "/dev/video0",
-                "input": 0,
-                "pixelformat": 1196444237,
-                "resolution": 8246337209400,
                 "Brightness": 6,
                 "Contrast": 14,
                 "Saturation": 20,
                 "Gamma": 4,
                 "Gain": 41,
                 "White Balance Temperature": 3,
-                "Auto Exposure": 1
+                "Auto Exposure": 1,
+                "input": 0,
+                "pixelformat": 1196444237,
+                "resolution": 8246337209400
             },
             "mixers": 0,
             "sync": 0,
@@ -106,11 +106,11 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
+                "url": "http://127.0.0.1:24050/BTMC-Overlay by Happy_24/",
                 "width": 710,
                 "height": 160,
                 "fps_custom": false,
-                "webpage_control_level": 5,
-                "url": "http://127.0.0.1:24050/BTMC-Overlay by Happy_24/"
+                "webpage_control_level": 5
             },
             "mixers": 255,
             "sync": 0,
@@ -206,12 +206,12 @@
                     "id": "background_removal",
                     "versioned_id": "background_removal",
                     "settings": {
-                        "blur_background": 3,
                         "advanced": false,
-                        "mask_expansion": -15,
-                        "threshold": 0.35,
+                        "stop_when_source_is_inactive": true,
                         "enable_threshold": true,
-                        "stop_when_source_is_inactive": true
+                        "threshold": 0.35,
+                        "mask_expansion": -15,
+                        "blur_background": 3
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -265,7 +265,7 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Linux , 429 days\n(NixOS, 4 days)\nWooting , 345 days\n(62 spring)\nCTL 472 , 16 days\n(600hz)"
+                "text": "Linux , 430 days\n(NixOS, 4 days)\nWooting , 346 days\n(62 spring)\nCTL 472 , 117 days\n(600hz)"
             },
             "mixers": 0,
             "sync": 0,
@@ -286,13 +286,12 @@
         },
         {
             "prev_ver": 537001986,
-            "name": "Wayland output(dmabuf)",
-            "uuid": "637e5cd7-eb0c-48ba-bc05-6bae2a4020c8",
-            "id": "wlrobs-dmabuf",
-            "versioned_id": "wlrobs-dmabuf",
+            "name": "Screen Capture (PipeWire)",
+            "uuid": "3a4bc704-edf9-492b-bf5a-929b995ccfe1",
+            "id": "pipewire-screen-capture-source",
+            "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "output": "HDMI-A-1",
-                "show_cursor": true
+                "RestoreToken": "g6v3HlIw8IBvN13Oh8KfAA"
             },
             "mixers": 0,
             "sync": 0,
@@ -318,7 +317,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 26,
+                "id_counter": 29,
                 "custom_size": false,
                 "items": [
                     {
@@ -377,6 +376,61 @@
                         "private_settings": {}
                     },
                     {
+                        "name": "Screen Capture (PipeWire)",
+                        "source_uuid": "3a4bc704-edf9-492b-bf5a-929b995ccfe1",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 29,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 357.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.1166666746139526,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.8140624761581421,
+                            "y": 0.8138889074325562
+                        },
+                        "scale_rel": {
+                            "x": 0.8140624761581421,
+                            "y": 0.8138889074325562
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
                         "name": "Video Capture Device (V4L2)",
                         "source_uuid": "5fb7f1fb-ad4d-4cec-9e98-738d6df673d1",
                         "visible": true,
@@ -411,61 +465,6 @@
                         "scale_rel": {
                             "x": 0.3151041567325592,
                             "y": 0.31481480598449707
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "Wayland output(dmabuf)",
-                        "source_uuid": "637e5cd7-eb0c-48ba-bc05-6bae2a4020c8",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 26,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 439.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -0.9648148417472839,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 0.7713541388511658,
-                            "y": 0.7712963223457336
-                        },
-                        "scale_rel": {
-                            "x": 0.7713541388511658,
-                            "y": 0.7712963223457336
                         },
                         "bounds": {
                             "x": 0.0,
@@ -666,18 +665,18 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.24": [],
+                "libobs.hide_scene_item.24": [],
                 "libobs.show_scene_item.19": [],
                 "libobs.hide_scene_item.19": [],
                 "libobs.show_scene_item.20": [],
                 "libobs.hide_scene_item.20": [],
                 "libobs.show_scene_item.22": [],
                 "libobs.hide_scene_item.22": [],
-                "libobs.show_scene_item.24": [],
-                "libobs.hide_scene_item.24": [],
                 "libobs.show_scene_item.25": [],
                 "libobs.hide_scene_item.25": [],
-                "libobs.show_scene_item.26": [],
-                "libobs.hide_scene_item.26": []
+                "libobs.show_scene_item.29": [],
+                "libobs.hide_scene_item.29": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -723,7 +722,7 @@
     ],
     "saved_projectors": [],
     "preview_locked": false,
-    "scaling_enabled": true,
+    "scaling_enabled": false,
     "scaling_level": -11,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
