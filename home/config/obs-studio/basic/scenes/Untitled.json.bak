@@ -265,7 +265,7 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Linux , 430 days\n(NixOS, 4 days)\nWooting , 346 days\n(62 spring)\nCTL 472 , 117 days\n(600hz)"
+                "text": "Linux , 430 days\n(NixOS, 5 days)\nWooting , 346 days\n(62 spring)\nCTL 472 , 117 days\n(600hz)"
             },
             "mixers": 0,
             "sync": 0,
@@ -291,7 +291,33 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "g6v3HlIw8IBvN13Oh8KfAA"
+                "RestoreToken": "XLqmG_mMTNgv71Wh15kkDA"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Image",
+            "uuid": "850ef57c-51af-4536-a3ba-ba7af49902db",
+            "id": "image_source",
+            "versioned_id": "image_source",
+            "settings": {
+                "file": "/home/stars/Downloads/overlay/2020846-c3806.jpg"
             },
             "mixers": 0,
             "sync": 0,
@@ -317,7 +343,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 29,
+                "id_counter": 30,
                 "custom_size": false,
                 "items": [
                     {
@@ -632,12 +658,67 @@
                             "y": 1.0
                         },
                         "bounds": {
-                            "x": 374.0,
-                            "y": 251.0
+                            "x": 353.0,
+                            "y": 243.0
                         },
                         "bounds_rel": {
-                            "x": 0.6925926208496094,
-                            "y": 0.46481481194496155
+                            "x": 0.6537036895751953,
+                            "y": 0.44999998807907104
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image",
+                        "source_uuid": "850ef57c-51af-4536-a3ba-ba7af49902db",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 30,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 26.0,
+                            "y": 47.0
+                        },
+                        "pos_rel": {
+                            "x": -1.729629635810852,
+                            "y": -0.9129629731178284
+                        },
+                        "scale": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "scale_rel": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -676,7 +757,9 @@
                 "libobs.show_scene_item.25": [],
                 "libobs.hide_scene_item.25": [],
                 "libobs.show_scene_item.29": [],
-                "libobs.hide_scene_item.29": []
+                "libobs.hide_scene_item.29": [],
+                "libobs.show_scene_item.30": [],
+                "libobs.hide_scene_item.30": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,

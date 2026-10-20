@@ -23,6 +23,8 @@
     config.enabledThemes =  [ "discord-system24.css" ];
    };  
 
+
+  programs.umbriel.enable = true;
   programs.noctalia = {
     enable = true;
     recommendedServices.enable = true;
@@ -58,14 +60,6 @@
     ui.enable = true; # For overlay
   };
 
-  programs.umbriel.enable = true;
-  programs.umbriel.portalPackage = inputs.umbriel.packages.${pkgs.stdenv.hostPlatform.system}
-  .xdg-desktop-portal-umbriel.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-      ./portal-cursor-dmabuf.patch
-    ];
-    doCheck = true;
-  });
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ icu openssl zlib ];
