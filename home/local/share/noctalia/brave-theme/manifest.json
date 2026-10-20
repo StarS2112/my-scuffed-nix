@@ -1,0 +1,148 @@
+{
+  "manifest_version": 3,
+  "name": "Noctalia",
+  "version": "1.20261020.111532",
+  "description": "Noctalia palette theme for Brave / Chromium chrome UI",
+  "theme": {
+    "images": {
+      "theme_frame": "images/theme_frame.png",
+      "theme_frame_inactive": "images/theme_frame_inactive.png",
+      "theme_frame_incognito": "images/theme_frame_incognito.png",
+      "theme_toolbar": "images/theme_toolbar.png",
+      "theme_ntp_background": "images/theme_ntp_background.png",
+      "theme_tab_background": "images/theme_tab_background.png"
+    },
+    "colors": {
+      "frame": [
+        29,
+        16,
+        14
+      ],
+      "frame_inactive": [
+        29,
+        16,
+        14
+      ],
+      "frame_incognito": [
+        29,
+        16,
+        14
+      ],
+      "frame_incognito_inactive": [
+        29,
+        16,
+        14
+      ],
+      "toolbar": [
+        42,
+        28,
+        26
+      ],
+      "toolbar_text": [
+        246,
+        221,
+        217
+      ],
+      "toolbar_button_icon": [
+        246,
+        221,
+        217
+      ],
+      "tab_text": [
+        246,
+        221,
+        217
+      ],
+      "tab_background_text": [
+        225,
+        191,
+        186
+      ],
+      "tab_background_text_inactive": [
+        225,
+        191,
+        186
+      ],
+      "tab_background_text_incognito": [
+        246,
+        221,
+        217
+      ],
+      "tab_background_text_incognito_inactive": [
+        225,
+        191,
+        186
+      ],
+      "bookmark_text": [
+        246,
+        221,
+        217
+      ],
+      "background_tab": [
+        29,
+        16,
+        14
+      ],
+      "background_tab_inactive": [
+        29,
+        16,
+        14
+      ],
+      "background_tab_incognito": [
+        29,
+        16,
+        14
+      ],
+      "background_tab_incognito_inactive": [
+        29,
+        16,
+        14
+      ],
+      "button_background": [
+        29,
+        16,
+        14
+      ],
+      "omnibox_background": [
+        53,
+        38,
+        36
+      ],
+      "omnibox_text": [
+        246,
+        221,
+        217
+      ],
+      "ntp_background": [
+        29,
+        16,
+        14
+      ],
+      "ntp_text": [
+        246,
+        221,
+        217
+      ],
+      "ntp_link": [
+        255,
+        180,
+        169
+      ],
+      "ntp_header": [
+        42,
+        28,
+        26
+      ],
+      "ntp_section": [
+        42,
+        28,
+        26
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "top",
+      "ntp_background_repeat": "no-repeat",
+      "ntp_logo_alternate": 1
+    }
+  }
+}

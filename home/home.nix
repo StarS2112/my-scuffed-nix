@@ -23,6 +23,8 @@
   };
 
   # Direct out-of-store symlinks for instant dotfile editing without rebuilding
+  xdg.dataFile."noctalia".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/local/share/noctalia";
+  xdg.stateFile."noctalia".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/local/state/noctalia";
   xdg.configFile."fish".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/fish";
   xdg.configFile."fastfetch".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/fastfetch";
   xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink "/home/stars/nixos-config/home/config/kitty";

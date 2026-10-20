@@ -225,12 +225,12 @@
     extra-substituters = [ 
       "https://noctalia.cachix.org"
       "https://nix-gaming.cachix.org"
-      "https://attic.xuyh0120.win/lantian"
+      "https://cache.xinux.uz"
     ];
     extra-trusted-public-keys = [ 
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" 
       "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+      "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
      ];
   };
  
