@@ -248,6 +248,7 @@ hide_timeout_ms = 0
 # Extras
 "Mod+V" = { action = "spawn:noctalia msg panel-toggle clipboard" }
 "Mod+Period" = { action = "spawn:noctalia msg panel-toggle launcher '/emo '" }
+"Mod+Shift+P" = {action = "spawn:imv /home/stars/Pictures/stuff/HU1bbXjbkAAmG_m.jpg"}
 
 # ==============================================================================
 # Layout
