@@ -21,4 +21,13 @@
       "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
      ];
   };
+
+  security.polkit.enable = true;
+  networking.networkmanager.enable = true;
+  networking.hostName = "nixos";
+
+  systemd.tmpfiles.rules = [
+    "d /etc/brave/policies/managed 0755 stars users -"
+  ];
+
 }

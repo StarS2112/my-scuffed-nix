@@ -31,4 +31,12 @@
   config.common.default = [ "umbriel" "gtk" ];
   };
 
+# Plugins programs
+
+# Gpu Sceeen Recorder
+  programs.gpu-screen-recorder = {
+    enable = true;
+    ui.enable = true; # For overlay
+  };
+
 }

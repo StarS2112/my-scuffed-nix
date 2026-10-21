@@ -1,11 +1,16 @@
 { config, pkgs, ... }: {
   imports = [
-    ./package.nix
+    ./bootloader.nix
     ./audio.nix
+    ./package.nix
+    ./program.nix
     ./noctalia.nix
     ./service.nix
+    ./hardware.nix
+    ./locale.nix
     ./setting.nix
     ./font.nix
     ./user.nix
+    ./environment.nix
   ];
 }
