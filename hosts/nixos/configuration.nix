@@ -7,40 +7,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.noctalia.nixosModules.default
-      inputs.umbriel.nixosModules.default
-      inputs.nixcord.nixosModules.nixcord
+      ./modules/default.nix
      ];
   
   programs.fish.enable = true;
 
-  programs.nixcord = {
-    enable = false;
-    user = "stars";
-    vesktop.enable = true;
-    config.plugins.hideMedia.enable = true;
-    config.themes.myTheme = ./config/vesktop/themes/discord-system24.css;
-    config.enabledThemes =  [ "discord-system24.css" ];
-   };  
-
-
-  programs.umbriel.enable = true;
-  programs.noctalia = {
-    enable = true;
-    recommendedServices.enable = true;
-   };
-  programs.noctalia.systemd.enable = true;
-  services.displayManager.noctalia-greeter = {
-    enable = true;
-    settings = { 
-      cursor.size = 24;
-      keyboard.layout = "us";
-     };
-    cursorTheme = {
-     package = pkgs.bibata-cursors;
-     name = "Bibata-Modern-Ice";
-     };
-   };
 
    programs.obs-studio = {
     enable = true;
@@ -60,6 +31,10 @@
     ui.enable = true; # For overlay
   };
 
+  programs.appimage = {
+  enable = true;
+  binfmt = true;
+  };
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ icu openssl zlib ];
@@ -81,17 +56,6 @@
     "hid_uclogic"
     "wacom"
   ];
-
-  #audio
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    wireplumber.enable = true;
-   };
-
-  security.rtkit.enable = true;
 
   environment.etc."xdg/menus/applications.menu".source =
     "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
@@ -142,105 +106,27 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."stars" = {
-    isNormalUser = true;
-    description = "stars-nix";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-    shell = pkgs.fish;
-  };
+#   users.users."stars" = {
+#     isNormalUser = true;
+#     description = "stars-nix";
+#     extraGroups = [ "networkmanager" "wheel" ];
+#     packages = with pkgs; [];
+#     shell = pkgs.fish;
+#   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   #fonts
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    maple-mono.NF-unhinted
-    maple-mono.CN-unhinted
-    maple-mono.truetype
-    inter
-  ];
+#   fonts.packages = with pkgs; [
+#     noto-fonts
+#     noto-fonts-cjk-sans
+#     noto-fonts-color-emoji
+#     maple-mono.NF-unhinted
+#     maple-mono.CN-unhinted
+#     maple-mono.truetype
+#     inter
+#   ];
 
-  # List packages installed in system profile.
-  # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-    (python3.withPackages (ps: [ ps.pillow ]))
-    btop
-    fuse
-    git
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    fastfetch
-    wget
-    ntfs3g
-    exfatprogs
-    steam
-    steam-run
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    kitty
-    brave
-    vesktop
-    spicetify-cli
-    kdePackages.partitionmanager
-    kdePackages.dolphin
-    kdePackages.kate
-    kdePackages.ktexteditor
-    kdePackages.kio
-    kdePackages.kio-extras
-    kdePackages.kio-fuse
-    kdePackages.kio-admin
-    kdePackages.ark
-    kdePackages.ffmpegthumbs
-    kdePackages.qt6ct
-    kdePackages.plasma-integration
-    dconf
-    bibata-cursors-translucent
-    bibata-cursors
-    android-tools
-    scrcpy
-    gvfs
-    pciutils
-    ffmpeg-full
-    v4l-utils
-    starship
-    eza
-    mpv
-    imv
-    qpwgraph
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal
-    wl-clipboard
-    grim
-    swappy
-    slurp
-    fuzzel
-    unzip
-    xwayland-satellite
-   ];
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
-  nix.settings = {
-    extra-substituters = [ 
-      "https://noctalia.cachix.org"
-      "https://nix-gaming.cachix.org"
-      "https://cache.xinux.uz"
-    ];
-    extra-trusted-public-keys = [ 
-      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" 
-      "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
-      "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
-     ];
-  };
- 
   security.polkit.enable = true;
-
-  xdg.portal = {
-  enable = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  config.common.default = [ "umbriel" "gtk" ];
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

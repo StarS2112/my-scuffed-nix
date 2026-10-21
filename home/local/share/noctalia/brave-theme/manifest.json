@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Noctalia",
-  "version": "1.20261020.111532",
+  "version": "1.20261021.021101",
   "description": "Noctalia palette theme for Brave / Chromium chrome UI",
   "theme": {
     "images": {
