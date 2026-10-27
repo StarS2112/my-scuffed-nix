@@ -1,0 +1,72 @@
+{
+  "error": {
+    "stream_failed": "Impossibile avviare `umbriel subscribe workspaces`."
+  },
+  "layout": {
+    "dwindle": "Dwindle",
+    "master": "Master",
+    "scrolling": "Scrolling",
+    "unknown": "Sconosciuto"
+  },
+  "notify": {
+    "action_failed": "Umbriel ha rifiutato {azione}"
+  },
+  "panel": {
+    "center_column": "Centra colonna",
+    "center_window": "Centra finestra flottante",
+    "float": "Attiva/disattiva flottante",
+    "fullscreen": "Attiva/disattiva la modalità a schermo intero",
+    "master_count": "Finestre Master",
+    "master_decrease": "Sposta la finestra master inferiore nello stack",
+    "master_increase": "Sposta la finestra superiore dello stack nella finestra master",
+    "maximize": "Attiva/disattiva la massimizzazione",
+    "move_column": "Sposta la colonna qui",
+    "move_window": "Sposta la finestra qui",
+    "no_window": "Nessuna finestra in focus.",
+    "no_workspace": "Nessuno spazio di lavoro in focus.",
+    "no_workspaces": "Nessuna area di lavoro segnalata.",
+    "pin": "Attiva/disattiva bloccato",
+    "row_tooltip": "Fai clic per cambiare, fai clic con il pulsante destro del mouse per le azioni di movimento.",
+    "settings": "Impostazioni del plugin",
+    "switch": "Passa a quest'area di lavoro",
+    "target": "Spazio di lavoro in focus",
+    "unavailable": "Umbriel non è in esecuzione oppure il comando umbriel non è presente nel PATH.",
+    "width": "Larghezza",
+    "width_tooltip": "Imposta la larghezza al {percent}%",
+    "window_section": "Finestra in focus",
+    "workspaces": "Aree di lavoro"
+  },
+  "settings": {
+    "display_mode": {
+      "description": "Scegli se la barra deve mostrare il layout dell'area di lavoro attiva o il submap attivo.",
+      "label": "Mostra barra",
+      "options": {
+        "layout": "Layout",
+        "submap": "Submap"
+      }
+    },
+    "scroll_cycles_layout": {
+      "description": "Scrollando con il mouse sul widget, è possibile alternare tra scrolling, dwindle e master nell'area di lavoro selezionata.",
+      "label": "Lo scroll ruota tra layout"
+    },
+    "show_layout_name": {
+      "description": "Stampa il layout accanto al glifo della barra su una barra orizzontale.",
+      "label": "Mostra il nome del layout"
+    },
+    "show_workspace_name": {
+      "description": "Visualizza il nome dell'area di lavoro attiva accanto al glifo della barra su una barra orizzontale.",
+      "label": "Mostra il nome dell'area di lavoro"
+    }
+  },
+  "submap": {
+    "default": "Default"
+  },
+  "title": "Umbriel",
+  "tooltip": {
+    "layout": "Layout",
+    "submap": "Submap",
+    "waiting": "In attesa del flusso di eventi dell'area di lavoro",
+    "waiting_submap": "In attesa del flusso di eventi del submap",
+    "workspace": "Area di lavoro"
+  }
+}

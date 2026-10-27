@@ -265,7 +265,7 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Linux , 430 days\n(NixOS, 5 days)\nWooting , 346 days\n(62 spring)\nCTL 472 , 117 days\n(600hz)"
+                "text": "Linux , 436 days\n(NixOS, 8 days)\nWooting , 352 days\n(62 spring)\nCTL 472 , 123 days\n(600hz)"
             },
             "mixers": 0,
             "sync": 0,
@@ -291,7 +291,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "UXObtb2D_5BQaHsUXXDYcA"
+                "RestoreToken": "tWxae6FQ6_4kNEQfhJNqHg"
             },
             "mixers": 0,
             "sync": 0,
@@ -556,12 +556,12 @@
                         "id": 20,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1102.0,
-                            "y": 834.0
+                            "x": 1130.0,
+                            "y": 879.0
                         },
                         "pos_rel": {
-                            "x": 0.2629629671573639,
-                            "y": 0.5444444417953491
+                            "x": 0.31481480598449707,
+                            "y": 0.6277778148651123
                         },
                         "scale": {
                             "x": 1.1521127223968506,
@@ -887,7 +887,7 @@
     "saved_projectors": [],
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -17,
+    "scaling_level": -10,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {

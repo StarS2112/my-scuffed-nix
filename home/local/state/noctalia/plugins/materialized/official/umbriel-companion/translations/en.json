@@ -1,0 +1,74 @@
+{
+  "error": {
+    "stream_closed": "Umbriel connection closed; retrying.",
+    "stream_failed": "Could not start the Umbriel event stream; retrying."
+  },
+  "layout": {
+    "dwindle": "Dwindle",
+    "floating": "Floating",
+    "master": "Master",
+    "scrolling": "Scrolling",
+    "unknown": "Unknown"
+  },
+  "notify": {
+    "action_failed": "Umbriel rejected {action}"
+  },
+  "panel": {
+    "center_column": "Center column",
+    "center_window": "Center floating window",
+    "float": "Toggle floating",
+    "fullscreen": "Toggle fullscreen",
+    "master_count": "Master windows",
+    "master_decrease": "Move the bottom master window to the stack",
+    "master_increase": "Move the top stack window to master",
+    "maximize": "Toggle maximize",
+    "move_column": "Move column here",
+    "move_window": "Move window here",
+    "no_window": "No focused window.",
+    "no_workspace": "No focused workspace.",
+    "no_workspaces": "No workspaces reported.",
+    "pin": "Toggle pinned",
+    "row_tooltip": "Click to switch, right-click for move actions",
+    "settings": "Plugin settings",
+    "switch": "Switch to this workspace",
+    "target": "Focused workspace",
+    "unavailable": "Umbriel is not running, or the umbriel command is not on PATH.",
+    "width": "Width",
+    "width_tooltip": "Set width to {percent}%",
+    "window_section": "Focused window",
+    "workspaces": "Workspaces"
+  },
+  "settings": {
+    "display_mode": {
+      "description": "Choose whether the bar shows the focused workspace layout or the active keybind submap.",
+      "label": "Bar display",
+      "options": {
+        "layout": "Layout",
+        "submap": "Submap"
+      }
+    },
+    "scroll_cycles_layout": {
+      "description": "Scroll over the widget to cycle scrolling, dwindle, master, and floating on the focused workspace.",
+      "label": "Scroll cycles the layout"
+    },
+    "show_layout_name": {
+      "description": "Print the layout next to the bar glyph on a horizontal bar.",
+      "label": "Show layout name"
+    },
+    "show_workspace_name": {
+      "description": "Print the focused workspace name next to the bar glyph on a horizontal bar.",
+      "label": "Show workspace name"
+    }
+  },
+  "submap": {
+    "default": "Default"
+  },
+  "title": "Umbriel",
+  "tooltip": {
+    "layout": "Layout",
+    "submap": "Submap",
+    "waiting": "Waiting for the workspace event stream",
+    "waiting_submap": "Waiting for the submap event stream",
+    "workspace": "Workspace"
+  }
+}

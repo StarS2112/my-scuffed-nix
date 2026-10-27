@@ -10,6 +10,8 @@
   environment.sessionVariables. QT_QPA_PLATFORMTHEME = "kde";
 
   environment.shellAliases = {
+    f = "fastfetch";
+    ff = "fetch";
     rebuild-force =  "sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";
     rebuild-etc = "sudo nixos-rebuild switch";
     rebuild = "git -C ~/nixos-config add . && sudo nixos-rebuild switch --flake ~/nixos-config/#nixos";

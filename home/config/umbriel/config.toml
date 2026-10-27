@@ -73,6 +73,9 @@ tearing = true
 # https://docs.noctalia.dev/umbriel/appearance/
 [appearance.blur]
 radius = 3
+[appearance]
+corner_radius = 1
+
 
 # Choose the background color shown if the lock screen takes too long to appear.
 # [colors]
@@ -160,8 +163,14 @@ hide_timeout_ms = 0
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
 "Mod+L" = "spawn:noctalia msg session lock"
+"Mod+Shift+T" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
+"Mod+Ctrl+T" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+T" = "spawn:noctalia msg settings-toggle"
+
 #keybindlock
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
+
+
 
 # ScreenRecorder
 "Mod+Shift+R" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"

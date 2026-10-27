@@ -10,6 +10,7 @@
    environment.systemPackages = with pkgs; [
     (python3.withPackages (ps: [ ps.pillow ]))
     btop
+    easyeffects
     fuse
     git
     vim
@@ -43,6 +44,7 @@
     android-tools
     scrcpy
     gvfs
+    usbutils
     pciutils
     ffmpeg-full
     v4l-utils

@@ -1,0 +1,71 @@
+{
+  "error": {
+    "stream_failed": "无法启动 `umbriel subscribe workspaces`。"
+  },
+  "layout": {
+    "dwindle": "Dwindle",
+    "master": "Master",
+    "scrolling": "Scrolling",
+    "unknown": "未知"
+  },
+  "notify": {
+    "action_failed": "Umbriel 拒绝了 {action}"
+  },
+  "panel": {
+    "center_column": "居中列",
+    "center_window": "居中浮动窗口",
+    "float": "切换浮动",
+    "fullscreen": "切换全屏",
+    "master_count": "主窗口数量",
+    "master_decrease": "将底部主窗口移动到堆叠区",
+    "master_increase": "将顶部堆叠窗口移动到主区",
+    "maximize": "切换最大化",
+    "move_column": "将列移动到此处",
+    "move_window": "将窗口移动到此处",
+    "no_workspace": "没有焦点工作区。",
+    "no_workspaces": "未报告工作区。",
+    "pin": "切换固定",
+    "row_tooltip": "左键点击切换，右键执行移动操作",
+    "settings": "插件设置",
+    "switch": "切换到此工作区",
+    "target": "焦点工作区",
+    "unavailable": "Umbriel 未运行，或 umbriel 命令不在 PATH 中。",
+    "width": "宽度",
+    "width_tooltip": "设置宽度为 {percent}%",
+    "window_section": "焦点窗口",
+    "workspaces": "工作区"
+  },
+  "settings": {
+    "display_mode": {
+      "description": "选择状态栏是显示焦点工作区布局，还是当前快捷键 Submap。",
+      "label": "状态栏显示",
+      "options": {
+        "layout": "布局",
+        "submap": "Submap"
+      }
+    },
+    "scroll_cycles_layout": {
+      "description": "滚动小组件循环切换焦点工作区的 Scrolling、Dwindle 和 Master 布局。",
+      "label": "滚动切换布局"
+    },
+    "show_layout_name": {
+      "description": "在水平状态栏中，将布局显示在图标旁。",
+      "label": "显示布局名称"
+    },
+    "show_workspace_name": {
+      "description": "在水平状态栏中，将焦点工作区名称显示在图标旁。",
+      "label": "显示工作区名称"
+    }
+  },
+  "submap": {
+    "default": "默认"
+  },
+  "title": "Umbriel",
+  "tooltip": {
+    "layout": "布局",
+    "submap": "Submap",
+    "waiting": "等待工作区事件流",
+    "waiting_submap": "等待 Submap 事件流",
+    "workspace": "工作区"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "panel": {
+    "row_tooltip": "클릭하여 전환하고 우클릭으로 이동 작업 표시",
+    "settings": "플러그인 설정",
+    "switch": "이 작업 공간으로 전환",
+    "target": "포커스된 작업 공간",
+    "unavailable": "Umbriel이 실행 중이지 않거나 umbriel 명령어가 PATH에 등록되어 있지 않습니다.",
+    "width": "너비",
+    "width_tooltip": "너비가 {percent}%로 설정됨",
+    "workspaces": "작업 공간"
+  },
+  "settings": {
+    "display_mode": {
+      "label": "바 디스플레이",
+      "options": {
+        "layout": "레이아웃"
+      }
+    },
+    "show_layout_name": {
+      "description": "가로 바에서 바 글리프 옆에 레이아웃을 표시합니다."
+    },
+    "show_workspace_name": {
+      "description": "",
+      "label": "작업 공간 이름 표시"
+    }
+  },
+  "submap": {
+    "default": "기본"
+  },
+  "title": "Umbriel",
+  "tooltip": {
+    "layout": "레이아웃",
+    "waiting": "작업 공간 이벤트 스트림을 기다리는 중",
+    "workspace": "작업 공간"
+  }
+}

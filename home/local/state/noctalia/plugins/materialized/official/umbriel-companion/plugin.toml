@@ -1,0 +1,76 @@
+# Umbriel Companion - runtime layout control for the Umbriel compositor.
+#
+# Umbriel pushes workspace layouts and the active keybind submap over its IPC
+# event stream. One [[service]] holds both subscriptions open, republishes each
+# line as a snapshot on the "umbriel.state" channel, and runs the actions
+# requested on "umbriel.request".
+#
+# bar     -> focused layout or active submap; click opens the panel, scroll
+#            cycles the layout
+# panel   -> layout picker, layout-specific actions, focused-window actions,
+#            and a workspace switcher
+# service -> the only entry that shells out to `umbriel`
+
+id = "noctalia/umbriel-companion"
+name = "Umbriel Companion"
+version = "1.2.0"
+plugin_api = 28
+author = "noctalia"
+license = "MIT"
+dependencies = ["umbriel"]
+tags = ["umbriel", "bar", "panel", "utility"]
+icon = "layout-columns"
+description = "Show Umbriel layout or submap state and drive workspace and window actions from the bar."
+
+# No plugin-level settings: state is event-driven; the retry interval only
+# applies while disconnected.
+
+[[widget]]
+id = "bar"
+entry = "bar.luau"
+
+  [[widget.setting]]
+  key = "display_mode"
+  type = "select"
+  label_key = "settings.display_mode.label"
+  description_key = "settings.display_mode.description"
+  default = "layout"
+  options = [
+    { value = "layout", label_key = "settings.display_mode.options.layout" },
+    { value = "submap", label_key = "settings.display_mode.options.submap" },
+  ]
+
+  [[widget.setting]]
+  key = "show_layout_name"
+  type = "bool"
+  label_key = "settings.show_layout_name.label"
+  description_key = "settings.show_layout_name.description"
+  default = false
+  visible_when = { key = "display_mode", values = ["layout"] }
+
+  [[widget.setting]]
+  key = "show_workspace_name"
+  type = "bool"
+  label_key = "settings.show_workspace_name.label"
+  description_key = "settings.show_workspace_name.description"
+  default = false
+
+  [[widget.setting]]
+  key = "scroll_cycles_layout"
+  type = "bool"
+  label_key = "settings.scroll_cycles_layout.label"
+  description_key = "settings.scroll_cycles_layout.description"
+  default = true
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 380
+height = 660
+placement = "attached"
+position = "auto"
+open_near_click = true
+
+[[service]]
+id = "service"
+entry = "service.luau"
