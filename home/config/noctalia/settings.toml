@@ -3,4 +3,6 @@ polkit_agent = true
 
 [theme.templates.user.brave]
 input_path = "/home/stars/.config/noctalia/brave-color.json"
-output_path = "/etc/brave/policies/managed/color.json"
+# output_path = "/etc/brave/policies/managed/color.json"
+output_path = "/var/tmp/noctalia-brave-color.json"
+post_hook = 'f=/etc/brave/policies/managed/color.json; t=/var/tmp/noctalia-brave-color.json; if [ -f "$f" ]; then touch -r "$f" "$t"; fi; mv -f "$t" "$f"'
