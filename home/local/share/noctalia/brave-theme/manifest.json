@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Noctalia",
-  "version": "1.20261027.115405",
+  "version": "1.20261027.121848",
   "description": "Noctalia palette theme for Brave / Chromium chrome UI",
   "theme": {
     "images": {
@@ -14,129 +14,129 @@
     },
     "colors": {
       "frame": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "frame_inactive": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "frame_incognito": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "frame_incognito_inactive": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "toolbar": [
-        33,
-        30,
-        41
+        29,
+        32,
+        35
       ],
       "toolbar_text": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "toolbar_button_icon": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "tab_text": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "tab_background_text": [
-        204,
-        195,
-        217
+        193,
+        199,
+        208
       ],
       "tab_background_text_inactive": [
-        204,
-        195,
-        217
+        193,
+        199,
+        208
       ],
       "tab_background_text_incognito": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "tab_background_text_incognito_inactive": [
-        204,
-        195,
-        217
+        193,
+        199,
+        208
       ],
       "bookmark_text": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "background_tab": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "background_tab_inactive": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "background_tab_incognito": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "background_tab_incognito_inactive": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "button_background": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "omnibox_background": [
-        44,
         40,
-        52
+        42,
+        46
       ],
       "omnibox_text": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "ntp_background": [
-        21,
-        18,
-        28
+        17,
+        20,
+        23
       ],
       "ntp_text": [
-        231,
-        223,
-        239
+        225,
+        226,
+        231
       ],
       "ntp_link": [
-        208,
-        188,
+        156,
+        202,
         255
       ],
       "ntp_header": [
-        33,
-        30,
-        41
+        29,
+        32,
+        35
       ],
       "ntp_section": [
-        33,
-        30,
-        41
+        29,
+        32,
+        35
       ]
     },
     "properties": {
