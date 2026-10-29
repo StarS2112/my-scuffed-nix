@@ -13,7 +13,6 @@
     unrar
     easyeffects
     fuse
-    git
     vim
     fastfetch
     wget
