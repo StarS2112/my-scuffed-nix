@@ -13,8 +13,8 @@
 
 id = "noctalia/umbriel-companion"
 name = "Umbriel Companion"
-version = "1.2.0"
-plugin_api = 28
+version = "1.2.1"
+plugin_api = 43
 author = "noctalia"
 license = "MIT"
 dependencies = ["umbriel"]

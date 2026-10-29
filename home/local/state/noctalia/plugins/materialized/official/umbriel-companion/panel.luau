@@ -62,7 +62,7 @@ local function sectionTitle(key)
 end
 
 local function unavailableCard()
-  return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_variant/0.35" }, {
+  return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_container/0.35" }, {
     ui.glyph({ name = "alert-triangle", size = 20, color = "error" }),
     ui.label({ text = tr("panel.unavailable"), color = "on_surface_variant", fontSize = 12, wrap = true, flexGrow = 1 }),
   })
@@ -70,13 +70,13 @@ end
 
 local function targetCard(focused)
   if focused == nil then
-    return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_variant/0.35" }, {
+    return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_container/0.35" }, {
       ui.glyph({ name = "layout-board", size = 20, color = "on_surface_variant" }),
       ui.label({ text = tr("panel.no_workspace"), color = "on_surface_variant", fontSize = 12, flexGrow = 1 }),
     })
   end
 
-  return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_variant/0.35" }, {
+  return ui.row({ gap = 10, align = "center", padding = 10, radius = 8, fill = "surface_container/0.35" }, {
     ui.glyph({ name = LAYOUT_GLYPHS[focused.layout] or "layout-board", size = 20, color = "primary" }),
     ui.column({ gap = 2, flexGrow = 1 }, {
       ui.label({ text = `{focused.output} · {focused.name}`, fontWeight = "bold", fontSize = 13 }),

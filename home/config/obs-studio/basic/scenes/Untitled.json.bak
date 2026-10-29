@@ -265,7 +265,8 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Linux , 436 days\n(NixOS, 8 days)\nWooting , 352 days\n(62 spring)\nCTL 472 , 123 days\n(600hz)"
+                "text": "Linux , 440 days\n(NixOS, 12 days)\nWooting , 356 days\n(62 spring)\nCTL 472 , 127 days\n(600hz)\nUta - 2\nTrail is client side",
+                "log_mode": false
             },
             "mixers": 0,
             "sync": 0,
@@ -362,12 +363,38 @@
         },
         {
             "prev_ver": 537001986,
+            "name": "Text (FreeType 2) 2",
+            "uuid": "8ef045b3-e727-4e56-bb89-d8381414f497",
+            "id": "text_ft2_source",
+            "versioned_id": "text_ft2_source_v2",
+            "settings": {
+                "text": "AFK\n"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
             "name": "Scene",
             "uuid": "87c833dc-96e5-4131-904d-cff5b7003950",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 31,
+                "id_counter": 32,
                 "custom_size": false,
                 "items": [
                     {
@@ -682,12 +709,12 @@
                             "y": 1.0
                         },
                         "bounds": {
-                            "x": 353.0,
-                            "y": 243.0
+                            "x": 355.0,
+                            "y": 302.0
                         },
                         "bounds_rel": {
-                            "x": 0.6537036895751953,
-                            "y": 0.44999998807907104
+                            "x": 0.6574074029922485,
+                            "y": 0.5592592358589172
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -809,6 +836,61 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 2",
+                        "source_uuid": "8ef045b3-e727-4e56-bb89-d8381414f497",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 32,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 678.0,
+                            "y": 667.0
+                        },
+                        "pos_rel": {
+                            "x": -0.5222222208976746,
+                            "y": 0.2351851463317871
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -840,7 +922,9 @@
                 "libobs.show_scene_item.30": [],
                 "libobs.hide_scene_item.30": [],
                 "libobs.show_scene_item.31": [],
-                "libobs.hide_scene_item.31": []
+                "libobs.hide_scene_item.31": [],
+                "libobs.show_scene_item.32": [],
+                "libobs.hide_scene_item.32": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,

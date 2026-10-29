@@ -10,6 +10,7 @@
    environment.systemPackages = with pkgs; [
     (python3.withPackages (ps: [ ps.pillow ]))
     btop
+    unrar
     easyeffects
     fuse
     git
@@ -20,6 +21,7 @@
     exfatprogs
     steam
     steam-run
+    lutris
     inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     kitty

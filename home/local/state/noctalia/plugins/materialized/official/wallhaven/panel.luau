@@ -609,7 +609,7 @@ local function tileBorder(wallpaper, selected)
   if purity == "sketchy" then
     return "tertiary", TILE_BORDER_RATED
   end
-  return "outline", TILE_BORDER_SFW
+  return "outline_variant", TILE_BORDER_SFW
 end
 
 local function wallpaperPreview(wallpaper, frameWidth, frameHeight, borderColor, borderWidth)
@@ -633,7 +633,7 @@ local function wallpaperPreview(wallpaper, frameWidth, frameHeight, borderColor,
   return ui.box({
     width = frameWidth,
     height = frameHeight,
-    fill = "surface_variant",
+    fill = "surface_container",
     radius = TILE_FRAME_RADIUS,
     border = borderColor,
     borderWidth = borderWidth,
