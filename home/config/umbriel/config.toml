@@ -3,7 +3,7 @@
 # Copy this file to ~/.config/umbriel/config.toml. Most changes apply when the
 # file is saved. Check edits with `umbriel config validate`.
 #
-# Complete reference: https://docs.noctalia.dev/umbriel/
+# Complete reference  https //docs.noctalia.dev/umbriel/
 #
 # Commented settings below are examples, not built-in defaults.
 
@@ -11,7 +11,7 @@
 # Includes
 
 # Optional split configuration
-# https://docs.noctalia.dev/umbriel/configuration/#include
+# https //docs.noctalia.dev/umbriel/configuration/#include
 [include]
 files = []
 
@@ -22,7 +22,7 @@ files = ["noctalia.toml"]
 # General
 
 # Optional session examples. XWayland support is enabled by default.
-# https://docs.noctalia.dev/umbriel/configuration/#general
+# https //docs.noctalia.dev/umbriel/configuration/#general
 [general]
 autostart = ["noctalia"]
 # xwayland = false
@@ -38,10 +38,10 @@ autostart = ["noctalia"]
 # Remove the laptop panel from the desktop while the lid is closed, then
 # restore it when the lid opens. Replace eDP-1 with the name from
 # `umbriel outputs`.
-# https://docs.noctalia.dev/umbriel/configuration/#events
+# https //docs.noctalia.dev/umbriel/configuration/#events
 # [events]
-# lid_close = "umbriel msg output-disable:eDP-1"
-# lid_open = "umbriel msg output-enable:eDP-1"
+# lid_close = "umbriel msg output-disable eDP-1"
+# lid_open = "umbriel msg output-enable eDP-1"
 
 # ==============================================================================
 # Screencast
@@ -49,7 +49,7 @@ autostart = ["noctalia"]
 # By default, the first target-changing action during an active share asks for
 # confirmation. Disable that protection only if immediate keybind changes are
 # preferred.
-# https://docs.noctalia.dev/umbriel/configuration/#screencast
+# https //docs.noctalia.dev/umbriel/configuration/#screencast
 [screencast]
 disable_dynamic_confirmation = true
 
@@ -57,7 +57,7 @@ disable_dynamic_confirmation = true
 # Outputs
 
 # Outputs are machine-specific. Run `umbriel outputs` to find names and modes.
-# https://docs.noctalia.dev/umbriel/outputs/
+# https //docs.noctalia.dev/umbriel/outputs/
 #
 [output.HDMI-A-1]
 mode = "1920x1080@75"
@@ -70,7 +70,7 @@ tearing = true
 # ==============================================================================
 # Appearance
 # Blur uses a smaller radius than the built-in default.
-# https://docs.noctalia.dev/umbriel/appearance/
+# https //docs.noctalia.dev/umbriel/appearance/
 [appearance.blur]
 radius = 3
 [appearance]
@@ -86,7 +86,7 @@ corner_radius = 1
 # Every effect is off until a preset is selected; border and window effects
 # scale with overview zoom. Include a bundled preset (adjust /usr for the
 # package prefix), then select it by name.
-# https://docs.noctalia.dev/umbriel/effects/
+# https //docs.noctalia.dev/umbriel/effects/
 # [include]
 # files = ["/usr/share/umbriel/effects/border/pulse/effect.toml"]
 # For a cursor tail, include /usr/share/umbriel/effects/cursor/trail/effect.toml
@@ -102,18 +102,18 @@ corner_radius = 1
 # choose = ["pulse"]
 # selection = "unused_first" # or round_robin, random
 # Select with border = "borders" in your [effects] table.
-# Add to your existing [keybinds] table:
-# "Mod+Shift+E" = "effect-border-cycle:borders"
+# Add to your existing [keybinds] table
+# "Mod+Shift+E" = "effect-border-cycle borders"
 # "Mod+Ctrl+E" = "effect-border-toggle"
 # "Mod+Alt+E" = "effect-border-reset"
-
+#
 # [effects]
 # border = "pulse"
 
 # ==============================================================================
 # Input
 # Enable NumLock when a physical keyboard connects.
-# https://docs.noctalia.dev/umbriel/input/
+# https //docs.noctalia.dev/umbriel/input/
 [input.keyboard]
 # numlock_toggle = true
 
@@ -151,45 +151,45 @@ hide_timeout_ms = 0
 # Keybinds
 # Defining this table replaces the built-in bind set, so every active bind that
 # should remain available is listed here.
-# Syntax: https://docs.noctalia.dev/umbriel/keybinds/
-# Actions: https://docs.noctalia.dev/umbriel/actions/
+# Syntax  https //docs.noctalia.dev/umbriel/keybinds/
+# Actions  https //docs.noctalia.dev/umbriel/actions/
 [keybinds]
 
 # Applications and session
-"Mod+Return" = { action = "spawn:kitty", repeat = false }
-"Mod+W" = {action = "spawn:brave", repeat = false }
-"Mod+E" = {action = "spawn:dolphin", repeat = false}
-"Mod" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Return" = { action = "spawn kitty", repeat = false }
+"Mod+W" = {action = "spawn brave", repeat = false }
+"Mod+E" = {action = "spawn dolphin", repeat = false}
+"Mod" = "spawn noctalia msg panel-toggle launcher"
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
-"Mod+L" = "spawn:noctalia msg session lock"
-"Mod+Shift+T" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser"
-"Mod+Ctrl+T" = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+T" = "spawn:noctalia msg settings-toggle"
-
+"Mod+L" = "spawn noctalia msg session lock"
+"Mod+Shift+T" = "spawn noctalia msg panel-toggle noctalia/wallhaven browser"
+"Mod+Ctrl+T" = "spawn noctalia msg panel-toggle wallpaper"
+"Mod+T" = "spawn noctalia msg settings-toggle"
+"Mod+Shift+L" = "spawn noctalia msg panel-toggle noctalia/umbriel-companion panel"
 #keybindlock
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 
 
 
 # ScreenRecorder
-"Mod+Shift+R" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle"
+"Mod+Shift+R" = "spawn noctalia msg plugin noctalia/screen_recorder service all toggle"
 
 # Screenshot
-"Mod+Shift+S" = { action = "spawn:noctalia msg screenshot-region", allow_when_locked = true }
+"Mod+Shift+S" = { action = "spawn noctalia msg screenshot-region", allow_when_locked = true }
 
 # Media, volume and brightness keys from any input device, routed through the
 # Noctalia shell so its OSDs show. Safe while the session is locked.
-# https://docs.noctalia.dev/noctalia/compositor-settings/umbriel
-"XF86AudioRaiseVolume" = { action = "spawn:noctalia msg volume-up", allow_when_locked = true }
-"XF86AudioLowerVolume" = { action = "spawn:noctalia msg volume-down", allow_when_locked = true }
-"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true, repeat = false }
-"Mod+Space" = { action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
-"Mod+N" = { action = "spawn:noctalia msg media next", allow_when_locked = true }
-"Mod+B" = { action = "spawn:noctalia msg media previous", allow_when_locked = true }
-"Mod+M" = { action = "spawn:noctalia msg panel-toggle control-center media"}
-"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up", allow_when_locked = true }
-"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down", allow_when_locked = true }
+# https //docs.noctalia.dev/noctalia/compositor-settings/umbriel
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"Mod+Space" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"Mod+N" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"Mod+B" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+"Mod+M" = { action = "spawn noctalia msg panel-toggle control-center media"}
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }
 
 # Focus and movement
 # "Mod+Left" = "window-focus-left"
@@ -229,24 +229,24 @@ hide_timeout_ms = 0
 "Mod+O" = { action = "overview-toggle", repeat = false }
 
 # Workspaces
-"Mod+1" = "workspace-switch:1"
-"Mod+2" = "workspace-switch:2"
-"Mod+3" = "workspace-switch:3"
-"Mod+4" = "workspace-switch:4"
-"Mod+5" = "workspace-switch:5"
-"Mod+6" = "workspace-switch:6"
-"Mod+7" = "workspace-switch:7"
-"Mod+8" = "workspace-switch:8"
-"Mod+9" = "workspace-switch:9"
-"Mod+Shift+1" = "window-move-to-workspace:1"
-"Mod+Shift+2" = "window-move-to-workspace:2"
-"Mod+Shift+3" = "window-move-to-workspace:3"
-"Mod+Shift+4" = "window-move-to-workspace:4"
-"Mod+Shift+5" = "window-move-to-workspace:5"
-"Mod+Shift+6" = "window-move-to-workspace:6"
-"Mod+Shift+7" = "window-move-to-workspace:7"
-"Mod+Shift+8" = "window-move-to-workspace:8"
-"Mod+Shift+9" = "window-move-to-workspace:9"
+"Mod+1" = "workspace-switch 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+6" = "workspace-switch 6"
+"Mod+7" = "workspace-switch 7"
+"Mod+8" = "workspace-switch 8"
+"Mod+9" = "workspace-switch 9"
+"Mod+Shift+1" = "window-move-to-workspace 1"
+"Mod+Shift+2" = "window-move-to-workspace 2"
+"Mod+Shift+3" = "window-move-to-workspace 3"
+"Mod+Shift+4" = "window-move-to-workspace 4"
+"Mod+Shift+5" = "window-move-to-workspace 5"
+"Mod+Shift+6" = "window-move-to-workspace 6"
+"Mod+Shift+7" = "window-move-to-workspace 7"
+"Mod+Shift+8" = "window-move-to-workspace 8"
+"Mod+Shift+9" = "window-move-to-workspace 9"
 
 # Scratchpad
 "Mod+Shift+Delete" = { action = "window-move-to-scratchpad", repeat = false }
@@ -255,20 +255,20 @@ hide_timeout_ms = 0
 "Mod+Shift+Tab" = "scratchpad-focus-next"
 
 # Extras
-"Mod+V" = { action = "spawn:noctalia msg panel-toggle clipboard" }
-"Mod+Period" = { action = "spawn:noctalia msg panel-toggle launcher '/emo '" }
-"Mod+Shift+P" = {action = "spawn:imv /home/stars/Pictures/stuff/HU1bbXjbkAAmG_m.jpg"}
+"Mod+V" = { action = "spawn noctalia msg panel-toggle clipboard" }
+"Mod+Period" = { action = "spawn noctalia msg panel-toggle launcher '/emo '" }
+"Mod+Shift+P" = {action = "spawn imv /home/stars/Pictures/stuff/HU1bbXjbkAAmG_m.jpg"}
 
 # ==============================================================================
 # Layout
 # New scrolling-layout windows start at half the output width. Without this
 # setting, each application chooses its starting width. Stacked columns retain
 # their most recently focused row when focus leaves and later returns.
-# https://docs.noctalia.dev/umbriel/layout/
+# https //docs.noctalia.dev/umbriel/layout/
 [layout]
 extent_presets = [0.333, 0.5, 0.667]
 
-# What a tiled window's own maximize button does: "column" fills the column,
+# What a tiled window's own maximize button does  "column" fills the column,
 # "edges" fills the usable area without struts, gaps, or borders. The
 # window-toggle-maximize action is unaffected.
 # client_maximize = "column"
@@ -298,13 +298,17 @@ default_extent_fraction = 0.5
 # ==============================================================================
 # Window rules
 # Rules combine in order, with later values overriding earlier ones.
-# https://docs.noctalia.dev/umbriel/window-rules/
+# https //docs.noctalia.dev/umbriel/window-rules/
 
 # Blur windows using the non-optimized path so translucent windows include
 # overlapping windows behind them.
 [[window_rule]]
 blur = true
 blur_optimized = false
+
+[[window_rule]]
+match.is_alone = true
+default_maximize = true
 
 [[window_rule]]
 match.app_id = "^dev.noctalia.Noctalia$"
@@ -362,7 +366,7 @@ default_pinned = true
 
 # ==============================================================================
 # Layer rules
-# https://docs.noctalia.dev/umbriel/layer-rules/
+# https //docs.noctalia.dev/umbriel/layer-rules/
 [[layer_rule]]
 match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
 blur = true
@@ -374,8 +378,8 @@ blur_optimized = false
 # Overview
 # Built-in overview and animation values are used. The top-left hot corner opens
 # the overview after a short delay.
-# Overview: https://docs.noctalia.dev/umbriel/workspaces-overview/
-# Animation: https://docs.noctalia.dev/umbriel/animation/
+# Overview  https //docs.noctalia.dev/umbriel/workspaces-overview/
+# Animation  https //docs.noctalia.dev/umbriel/animation/
 [hot_corners.top_left]
 enabled = true
 delay_ms = 500
@@ -384,7 +388,7 @@ action = "overview-open"
 # Optional live workspace reveal (see docs/user/animation.md).
 # Add the bundled effects/animation/workspace_wipe/effect.toml to your includes.
 # [animation.workspaces]
-# style = "reveal"          # Default: "slide"
+# style = "reveal"          # Default  "slide"
 # effect = "workspace_wipe"
 # duration_ms = 300
 # curve = "easeout"
