@@ -8,7 +8,7 @@
   };
 
   nix.settings.trusted-users = [ "root" "stars" ];
-   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings = {
     extra-substituters = [
       "https://noctalia.cachix.org"
@@ -26,8 +26,12 @@
   networking.networkmanager.enable = true;
   networking.hostName = "nixos";
 
+  xdg.mime.defaultApplications = {
+  "inode/directory" = "org.kde.dolphin.desktop";
+  };
+
   systemd.tmpfiles.rules = [
     "d /etc/brave/policies/managed 0755 stars users -"
+    "f+ /home/stars/.config/mimeapps.list 0644 stars users - [Default Applications]\\ninode/directory=org.kde.dolphin.desktop\\napplication/x-zerosize=org.kde.kate.desktop\\nx-scheme-handler/discord=vesktop.desktop\\nx-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop\\n"
   ];
-
 }

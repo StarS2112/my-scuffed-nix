@@ -265,8 +265,8 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
-                "text": "Linux , 440 days\n(NixOS, 12 days)\nWooting , 356 days\n(62 spring)\nCTL 472 , 127 days\n(600hz)\nUta - 2\nTrail is client side",
-                "log_mode": false
+                "log_mode": false,
+                "text": "Linux , 443 days\n(NixOS, 15 days)\nWooting , 359 days\n(62 spring)\nCTL 472 , 130 days\n(600hz)\nTrail is client side"
             },
             "mixers": 0,
             "sync": 0,
@@ -292,7 +292,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "tWxae6FQ6_4kNEQfhJNqHg"
+                "RestoreToken": "QIcs_xsGDmLuYGBFh00vxQ"
             },
             "mixers": 0,
             "sync": 0,
@@ -389,12 +389,80 @@
         },
         {
             "prev_ver": 537001986,
+            "name": "Browser 4",
+            "uuid": "2fd885ce-036d-46ad-b957-7cfedb8d5fc3",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/KeyOverlay by cyperdark/",
+                "width": 500,
+                "height": 550
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Browser 5",
+            "uuid": "6cf8d65e-e58a-4747-8e7c-d1a89cb4af77",
+            "id": "browser_source",
+            "versioned_id": "browser_source",
+            "settings": {
+                "url": "http://127.0.0.1:24050/Combo by unknown/",
+                "width": 350,
+                "height": 40
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "ObsBrowser.Refresh": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
             "name": "Scene",
             "uuid": "87c833dc-96e5-4131-904d-cff5b7003950",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 32,
+                "id_counter": 34,
                 "custom_size": false,
                 "items": [
                     {
@@ -891,6 +959,116 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 4",
+                        "source_uuid": "2fd885ce-036d-46ad-b957-7cfedb8d5fc3",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 4,
+                        "crop_right": 188,
+                        "crop_bottom": 378,
+                        "id": 33,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1584.0,
+                            "y": 330.0
+                        },
+                        "pos_rel": {
+                            "x": 1.1555556058883667,
+                            "y": -0.3888888955116272
+                        },
+                        "scale": {
+                            "x": 1.076923131942749,
+                            "y": 1.077380895614624
+                        },
+                        "scale_rel": {
+                            "x": 1.076923131942749,
+                            "y": 1.077380895614624
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 5",
+                        "source_uuid": "6cf8d65e-e58a-4747-8e7c-d1a89cb4af77",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 81,
+                        "crop_bottom": 0,
+                        "id": 34,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 363.0,
+                            "y": 127.0
+                        },
+                        "pos_rel": {
+                            "x": -1.105555534362793,
+                            "y": -0.7648147940635681
+                        },
+                        "scale": {
+                            "x": 1.2973977327346802,
+                            "y": 1.2999999523162842
+                        },
+                        "scale_rel": {
+                            "x": 1.2973977327346802,
+                            "y": 1.2999999523162842
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -924,7 +1102,11 @@
                 "libobs.show_scene_item.31": [],
                 "libobs.hide_scene_item.31": [],
                 "libobs.show_scene_item.32": [],
-                "libobs.hide_scene_item.32": []
+                "libobs.hide_scene_item.32": [],
+                "libobs.show_scene_item.33": [],
+                "libobs.hide_scene_item.33": [],
+                "libobs.show_scene_item.34": [],
+                "libobs.hide_scene_item.34": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,

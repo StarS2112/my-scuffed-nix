@@ -6,6 +6,14 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     umbriel.url = "github:noctalia-dev/umbriel";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/02b8219a7dc6dd9db5660718382555ef25fce02c";
+     assella = {
+      url = "github:UltimatePlayer97/ASSella-nix";
+#       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sls-steam = {
+      url = "github:AceSLS/SLSsteam";
+#       inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
       #inputs.nixpkgs.follows = "nixpkgs"; #disable caches

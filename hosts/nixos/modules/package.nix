@@ -12,17 +12,21 @@
     btop
     unrar
     easyeffects
+    cava
     fuse
     vim
     fastfetch
     wget
     ntfs3g
     exfatprogs
-    steam
+#     steam
+    mangohud
     steam-run
     lutris
+    protonplus
     inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.assella.packages.${pkgs.system}.default
     kitty
     brave
     vesktop

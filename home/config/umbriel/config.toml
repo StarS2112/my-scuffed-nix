@@ -163,10 +163,10 @@ hide_timeout_ms = 0
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+Escape" = "session-quit"
 "Mod+L" = "spawn noctalia msg session lock"
-"Mod+Shift+T" = "spawn noctalia msg panel-toggle noctalia/wallhaven browser"
+"Mod+Shift+T" = "spawn noctalia msg panel-toggle noctalia/wallhaven:browser"
 "Mod+Ctrl+T" = "spawn noctalia msg panel-toggle wallpaper"
 "Mod+T" = "spawn noctalia msg settings-toggle"
-"Mod+Shift+L" = "spawn noctalia msg panel-toggle noctalia/umbriel-companion panel"
+"Mod+Shift+L" = "spawn noctalia msg panel-toggle noctalia/umbriel-companion:panel"
 #keybindlock
 "Mod+Shift+Escape" = { action = "shortcuts-inhibit-toggle", allow_when_inhibited = true, repeat = false }
 

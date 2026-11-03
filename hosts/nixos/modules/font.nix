@@ -8,6 +8,7 @@
     maple-mono.NF-unhinted
     maple-mono.CN-unhinted
     maple-mono.truetype
+    monaspace
     inter
   ];
 
