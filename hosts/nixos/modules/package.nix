@@ -19,20 +19,25 @@
     wget
     ntfs3g
     exfatprogs
+    file
 #     steam
     mangohud
+    lsfg-vk
+    lsfg-vk-ui
+    vulkan-tools
     steam-run
     lutris
     protonplus
     inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.assella.packages.${pkgs.system}.default
+#     inputs.assella.packages.${pkgs.system}.default
     kitty
     brave
     vesktop
     spicetify-cli
     kdePackages.partitionmanager
     kdePackages.dolphin
+    kdePackages.filelight
     kdePackages.kate
     kdePackages.ktexteditor
     kdePackages.kio

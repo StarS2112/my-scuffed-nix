@@ -173,7 +173,7 @@ hide_timeout_ms = 0
 
 
 # ScreenRecorder
-"Mod+Shift+R" = "spawn noctalia msg plugin noctalia/screen_recorder service all toggle"
+"Mod+Shift+R" = "spawn noctalia msg plugin noctalia/screen_recorder:service all toggle"
 
 # Screenshot
 "Mod+Shift+S" = { action = "spawn noctalia msg screenshot-region", allow_when_locked = true }

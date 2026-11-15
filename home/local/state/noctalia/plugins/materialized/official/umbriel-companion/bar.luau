@@ -57,7 +57,7 @@ local function updateTooltip(focused, explainEmpty, showSubmap)
   end
 
   if focused == nil then
-    -- A visible widget with no data has a reason: the stream failed to start, or
+    -- A visible widget with no data has a reason: the stream is disconnected, or
     -- the compositor answered and nothing is focused yet. Say which on hover
     -- instead of leaving a mute glyph.
     if explainEmpty then
@@ -148,7 +148,7 @@ function onScroll(_axis, steps, startsGesture)
 
   local delta = steps >= 0 and 1 or -1
   local target = LAYOUT_ORDER[((index - 1 + delta) % #LAYOUT_ORDER) + 1]
-  noctalia.state.set("umbriel.request", { action = `workspace-set-layout {target}` })
+  noctalia.state.set("umbriel.request", { request = { action = "workspace-set-layout", layout = target } })
 end
 
 noctalia.state.watch("umbriel.state", function(value)

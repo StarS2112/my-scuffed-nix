@@ -266,7 +266,7 @@
             "versioned_id": "text_ft2_source_v2",
             "settings": {
                 "log_mode": false,
-                "text": "Linux , 443 days\n(NixOS, 15 days)\nWooting , 359 days\n(62 spring)\nCTL 472 , 130 days\n(600hz)\nTrail is client side"
+                "text": "Linux , 450 days\n(NixOS, 22 days)\nWooting , 366 days\n(62 spring)\nCTL 472 , 137 days\n(600hz)\nTrail is client side"
             },
             "mixers": 0,
             "sync": 0,
@@ -292,7 +292,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "QIcs_xsGDmLuYGBFh00vxQ"
+                "RestoreToken": "slXguPxN2RpLaJOUfzkJ1Q"
             },
             "mixers": 0,
             "sync": 0,
@@ -320,30 +320,6 @@
             "settings": {
                 "file": "/home/stars/Downloads/overlay/2020846-c3806.jpg"
             },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 537001986,
-            "name": "Wayland output(dmabuf)",
-            "uuid": "2e9c913c-4af7-41ee-b883-6457c77b9c28",
-            "id": "wlrobs-dmabuf",
-            "versioned_id": "wlrobs-dmabuf",
-            "settings": {},
             "mixers": 0,
             "sync": 0,
             "flags": 0,
@@ -457,12 +433,36 @@
         },
         {
             "prev_ver": 537001986,
+            "name": "Text (FreeType 2) 3",
+            "uuid": "c570b8ee-be18-4520-ad4b-737f17eb521d",
+            "id": "text_ft2_source",
+            "versioned_id": "text_ft2_source_v2",
+            "settings": {},
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
             "name": "Scene",
             "uuid": "87c833dc-96e5-4131-904d-cff5b7003950",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 34,
+                "id_counter": 35,
                 "custom_size": false,
                 "items": [
                     {
@@ -541,20 +541,20 @@
                         "id": 29,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 357.0,
+                            "x": 355.0,
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -1.1166666746139526,
+                            "x": -1.1203703880310059,
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 0.8140624761581421,
-                            "y": 0.8138889074325562
+                            "x": 0.8151041865348816,
+                            "y": 0.8148148059844971
                         },
                         "scale_rel": {
-                            "x": 0.8140624761581421,
-                            "y": 0.8138889074325562
+                            "x": 0.8151041865348816,
+                            "y": 0.8148148059844971
                         },
                         "bounds": {
                             "x": 0.0,
@@ -596,20 +596,20 @@
                         "id": 19,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 605.0,
+                            "x": 693.0,
                             "y": 1080.0
                         },
                         "pos_rel": {
-                            "x": -0.6574074029922485,
+                            "x": -0.49444442987442017,
                             "y": 1.0
                         },
                         "scale": {
-                            "x": 0.3151041567325592,
-                            "y": 0.31481480598449707
+                            "x": 0.3609375059604645,
+                            "y": 0.3611111044883728
                         },
                         "scale_rel": {
-                            "x": 0.3151041567325592,
-                            "y": 0.31481480598449707
+                            "x": 0.3609375059604645,
+                            "y": 0.3611111044883728
                         },
                         "bounds": {
                             "x": 0.0,
@@ -688,7 +688,7 @@
                     {
                         "name": "Browser 2",
                         "source_uuid": "4997bbc1-a10c-4ad6-91f0-1fcbc8b9e1d6",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -743,7 +743,7 @@
                     {
                         "name": "Text (FreeType 2)",
                         "source_uuid": "63980a28-8285-4900-b46d-d31f6b575e57",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -798,7 +798,7 @@
                     {
                         "name": "Image",
                         "source_uuid": "850ef57c-51af-4536-a3ba-ba7af49902db",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -830,61 +830,6 @@
                         "scale_rel": {
                             "x": 0.5166666507720947,
                             "y": 0.5166666507720947
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "Wayland output(dmabuf)",
-                        "source_uuid": "2e9c913c-4af7-41ee-b883-6457c77b9c28",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 31,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1019,7 +964,7 @@
                         "name": "Browser 5",
                         "source_uuid": "6cf8d65e-e58a-4747-8e7c-d1a89cb4af77",
                         "visible": true,
-                        "locked": false,
+                        "locked": true,
                         "rot": 0.0,
                         "scale_ref": {
                             "x": 1920.0,
@@ -1069,6 +1014,61 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 3",
+                        "source_uuid": "c570b8ee-be18-4520-ad4b-737f17eb521d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 35,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -1099,14 +1099,1135 @@
                 "libobs.hide_scene_item.25": [],
                 "libobs.show_scene_item.30": [],
                 "libobs.hide_scene_item.30": [],
-                "libobs.show_scene_item.31": [],
-                "libobs.hide_scene_item.31": [],
                 "libobs.show_scene_item.32": [],
                 "libobs.hide_scene_item.32": [],
                 "libobs.show_scene_item.33": [],
                 "libobs.hide_scene_item.33": [],
                 "libobs.show_scene_item.34": [],
-                "libobs.hide_scene_item.34": []
+                "libobs.hide_scene_item.34": [],
+                "libobs.show_scene_item.35": [],
+                "libobs.hide_scene_item.35": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Scene 2",
+            "uuid": "7cef2a67-1ad6-4e4c-90b5-b7943520af63",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 0,
+                "custom_size": false,
+                "items": []
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Scene 3",
+            "uuid": "9c6d1bfe-8e65-4681-981f-e3e90a666a9f",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 12,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Screen Capture (PipeWire)",
+                        "source_uuid": "3a4bc704-edf9-492b-bf5a-929b995ccfe1",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "5fb7f1fb-ad4d-4cec-9e98-738d6df673d1",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 180.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1920.0,
+                            "y": 1000.0
+                        },
+                        "pos_rel": {
+                            "x": 1.7777777910232544,
+                            "y": 0.8518518209457397
+                        },
+                        "scale": {
+                            "x": 0.27031248807907104,
+                            "y": 0.27037036418914795
+                        },
+                        "scale_rel": {
+                            "x": 0.27031248807907104,
+                            "y": 0.27037036418914795
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 2",
+                        "source_uuid": "4997bbc1-a10c-4ad6-91f0-1fcbc8b9e1d6",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 64,
+                        "crop_right": 312,
+                        "crop_bottom": 478,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 519.0,
+                            "y": 1036.0
+                        },
+                        "pos_rel": {
+                            "x": -0.8166666626930237,
+                            "y": 0.9185185432434082
+                        },
+                        "scale": {
+                            "x": 0.7622950673103333,
+                            "y": 0.7586206793785095
+                        },
+                        "scale_rel": {
+                            "x": 0.7622950673103333,
+                            "y": 0.7586206793785095
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2)",
+                        "source_uuid": "63980a28-8285-4900-b46d-d31f6b575e57",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 256.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -0.5259259343147278
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 355.0,
+                            "y": 302.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.6574074029922485,
+                            "y": 0.5592592358589172
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image",
+                        "source_uuid": "850ef57c-51af-4536-a3ba-ba7af49902db",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 7,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 649.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": 0.20185184478759766
+                        },
+                        "scale": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "scale_rel": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 2",
+                        "source_uuid": "8ef045b3-e727-4e56-bb89-d8381414f497",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 9,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 710.0,
+                            "y": 697.0
+                        },
+                        "pos_rel": {
+                            "x": -0.46296295523643494,
+                            "y": 0.2907407283782959
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 3",
+                        "source_uuid": "c570b8ee-be18-4520-ad4b-737f17eb521d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 12,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.7": [],
+                "libobs.hide_scene_item.7": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 537001986,
+            "name": "Scene 4",
+            "uuid": "d7ca9fd1-d259-4cb3-8f7f-b4c29d4d749f",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 12,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Browser 3",
+                        "source_uuid": "096ab6e3-db98-4f5d-a9a9-8e96f7521358",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": -200.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.3703703880310059
+                        },
+                        "scale": {
+                            "x": 2.452500104904175,
+                            "y": 2.4533333778381348
+                        },
+                        "scale_rel": {
+                            "x": 2.452500104904175,
+                            "y": 2.4533333778381348
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "5fb7f1fb-ad4d-4cec-9e98-738d6df673d1",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 180.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "pos_rel": {
+                            "x": 1.7777777910232544,
+                            "y": 1.000000238418579
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Screen Capture (PipeWire)",
+                        "source_uuid": "3a4bc704-edf9-492b-bf5a-929b995ccfe1",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 622.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -0.6259258985519409,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.3812499940395355,
+                            "y": 0.38148146867752075
+                        },
+                        "scale_rel": {
+                            "x": 0.3812499940395355,
+                            "y": 0.38148146867752075
+                        },
+                        "bounds": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0018518518190830946,
+                            "y": 0.0018518518190830946
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser",
+                        "source_uuid": "32a714e9-6d9b-498d-a82d-a2fdf1ff742b",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1130.0,
+                            "y": 879.0
+                        },
+                        "pos_rel": {
+                            "x": 0.31481480598449707,
+                            "y": 0.6277778148651123
+                        },
+                        "scale": {
+                            "x": 1.1521127223968506,
+                            "y": 1.149999976158142
+                        },
+                        "scale_rel": {
+                            "x": 1.1521127223968506,
+                            "y": 1.149999976158142
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 2",
+                        "source_uuid": "4997bbc1-a10c-4ad6-91f0-1fcbc8b9e1d6",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 64,
+                        "crop_right": 312,
+                        "crop_bottom": 478,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 653.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": 0.2092592716217041
+                        },
+                        "scale": {
+                            "x": 0.7622950673103333,
+                            "y": 0.7586206793785095
+                        },
+                        "scale_rel": {
+                            "x": 0.7622950673103333,
+                            "y": 0.7586206793785095
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2)",
+                        "source_uuid": "63980a28-8285-4900-b46d-d31f6b575e57",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 2,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 357.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -0.33888888359069824
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 355.0,
+                            "y": 302.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.6574074029922485,
+                            "y": 0.5592592358589172
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image",
+                        "source_uuid": "850ef57c-51af-4536-a3ba-ba7af49902db",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 7,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 26.0,
+                            "y": 47.0
+                        },
+                        "pos_rel": {
+                            "x": -1.729629635810852,
+                            "y": -0.9129629731178284
+                        },
+                        "scale": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "scale_rel": {
+                            "x": 0.5166666507720947,
+                            "y": 0.5166666507720947
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 2",
+                        "source_uuid": "8ef045b3-e727-4e56-bb89-d8381414f497",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 9,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 678.0,
+                            "y": 667.0
+                        },
+                        "pos_rel": {
+                            "x": -0.5222222208976746,
+                            "y": 0.2351851463317871
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 4",
+                        "source_uuid": "2fd885ce-036d-46ad-b957-7cfedb8d5fc3",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 4,
+                        "crop_right": 188,
+                        "crop_bottom": 378,
+                        "id": 10,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1584.0,
+                            "y": 330.0
+                        },
+                        "pos_rel": {
+                            "x": 1.1555556058883667,
+                            "y": -0.3888888955116272
+                        },
+                        "scale": {
+                            "x": 1.076923131942749,
+                            "y": 1.077380895614624
+                        },
+                        "scale_rel": {
+                            "x": 1.076923131942749,
+                            "y": 1.077380895614624
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Browser 5",
+                        "source_uuid": "6cf8d65e-e58a-4747-8e7c-d1a89cb4af77",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 81,
+                        "crop_bottom": 0,
+                        "id": 11,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 363.0,
+                            "y": 127.0
+                        },
+                        "pos_rel": {
+                            "x": -1.105555534362793,
+                            "y": -0.7648147940635681
+                        },
+                        "scale": {
+                            "x": 1.2973977327346802,
+                            "y": 1.2999999523162842
+                        },
+                        "scale_rel": {
+                            "x": 1.2973977327346802,
+                            "y": 1.2999999523162842
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2) 3",
+                        "source_uuid": "c570b8ee-be18-4520-ad4b-737f17eb521d",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 12,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.7": [],
+                "libobs.hide_scene_item.7": [],
+                "libobs.show_scene_item.9": [],
+                "libobs.hide_scene_item.9": [],
+                "libobs.show_scene_item.10": [],
+                "libobs.hide_scene_item.10": [],
+                "libobs.show_scene_item.11": [],
+                "libobs.hide_scene_item.11": [],
+                "libobs.show_scene_item.12": [],
+                "libobs.hide_scene_item.12": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1119,10 +2240,19 @@
     "scene_order": [
         {
             "name": "Scene"
+        },
+        {
+            "name": "Scene 4"
+        },
+        {
+            "name": "Scene 3"
+        },
+        {
+            "name": "Scene 2"
         }
     ],
-    "current_scene": "Scene",
-    "current_program_scene": "Scene",
+    "current_scene": "Scene 3",
+    "current_program_scene": "Scene 3",
     "canvases": [],
     "current_transition": "Fade",
     "transition_duration": 300,
